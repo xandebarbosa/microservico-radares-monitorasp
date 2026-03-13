@@ -1,0 +1,7 @@
+# Ignora pastas de compilação local e arquivos de IDE
+target/
+.idea/
+.vscode/
+.mvn/
+*.iml
+*.log
