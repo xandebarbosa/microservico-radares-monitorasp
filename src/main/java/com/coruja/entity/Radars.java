@@ -19,7 +19,7 @@ public class Radars {
     @BsonId
     public ObjectId id;
 
-    @BsonProperty("Data")
+    @BsonProperty("DATA")
     public String data;
 
     @BsonProperty("HORA")

@@ -25,6 +25,7 @@ public class RadarsService {
 
     private static final Logger LOG = Logger.getLogger(RadarsService.class);
     private static final DateTimeFormatter MONGO_DATE_FMT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final DateTimeFormatter MONGO_TIME_FMT = DateTimeFormatter.ofPattern("HH:mm:ss");
 
     // Regex para extrair "SP 310" e "240.40" de "Rodovia: SP 310 KM:240.40"
     private static final Pattern LOCAL_PATTERN = Pattern.compile("(?i)Rodovia:\\s*(.*?)\\s*KM:\\s*(.*)");
@@ -79,8 +80,8 @@ public class RadarsService {
 
         if (horaInicial != null || horaFinal != null) {
             Document horaFilter = new Document();
-            if (horaInicial != null) horaFilter.append("$gte", horaInicial.toString());
-            if (horaFinal != null) horaFilter.append("$lte", horaFinal.toString());
+            if (horaInicial != null) horaFilter.append("$gte", horaInicial.format(MONGO_TIME_FMT));
+            if (horaFinal != null) horaFilter.append("$lte", horaFinal.format(MONGO_TIME_FMT));
             filter.append("HORA", horaFilter);
         }
 
@@ -106,6 +107,12 @@ public class RadarsService {
         return radarsRepository.findUltimos(limite).stream()
                 .map(this::converterParaDTO)
                 .collect(Collectors.toList());
+    }
+
+    // 🔹 NOVO: Busca apenas o último (usado no Dashboard do FrontEnd)
+    public RadarsDTO buscarUltimo() {
+        List<RadarsDTO> ultimos = buscarUltimos(1);
+        return ultimos.isEmpty() ? null : ultimos.get(0);
     }
 
     // ═══════════════════════════════════════════════════════════════
@@ -162,16 +169,30 @@ public class RadarsService {
 
         Matcher matcher = LOCAL_PATTERN.matcher(rawLocal);
         if (matcher.find()) {
-            rodovia = matcher.group(1).trim(); // Retorna "SP 310"
-            km = matcher.group(2).trim(); // Retorna "240.40"
+            rodovia = matcher.group(1).trim();
+            km = matcher.group(2).trim();
         } else {
-            rodovia = rawLocal; //Fallback caso algum registro esteja fora do padrão
+            rodovia = rawLocal;
+        }
+
+        // 🔹 CORREÇÃO: Tratamento de exceção local. Se algum dado no MongoDB estiver corrompido,
+        // usamos data atual em vez de quebrar a API inteira (NullPointerException)
+        LocalDate dataConvertida = LocalDate.now();
+        if (r.getData() != null && !r.getData().isBlank()) {
+            try { dataConvertida = LocalDate.parse(r.getData(), MONGO_DATE_FMT); }
+            catch (Exception ignored) {}
+        }
+
+        LocalTime horaConvertida = LocalTime.MIDNIGHT;
+        if (r.getHora() != null && !r.getHora().isBlank()) {
+            try { horaConvertida = LocalTime.parse(r.getHora()); }
+            catch (Exception ignored) {}
         }
 
         return RadarsDTO.builder()
                 .id(Math.abs(UUID.randomUUID().getMostSignificantBits()))
-                .data(LocalDate.parse(r.getData(), MONGO_DATE_FMT))
-                .hora(LocalTime.parse(r.getHora()))
+                .data(dataConvertida)
+                .hora(horaConvertida)
                 .placa(r.getPlaca())
                 .concessionaria("MonitoraSP")
                 .praca("")
@@ -179,6 +200,5 @@ public class RadarsService {
                 .km(km)
                 .sentido(r.getSentido() != null ? r.getSentido().toUpperCase() : null)
                 .build();
-
     }
 }

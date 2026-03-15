@@ -111,6 +111,7 @@ public class RadarsResource {
 
     @GET
     @Operation(summary = "Lista todos os radares paginados")
+    @Blocking
     public Response getAllRadars(
             @QueryParam("page") @DefaultValue("0") int page,
             @QueryParam("size") @DefaultValue("20") int size
@@ -149,12 +150,17 @@ public class RadarsResource {
     //  GET /radares/ultimos
     // ═══════════════════════════════════════════════════════════════
     @GET
-    @Path("/ultimos")
-    @Operation(summary = "Busca os radares mais recentes processados")
+    @Path("/ultimo")
+    @Operation(summary = "Busca o radar mais recente processado (1 registro)")
     @Blocking
-    public Response buscarUltimos(@QueryParam("limite") @DefaultValue("10") int limite) {
-        java.util.List<RadarsDTO> ultimos = radarsService.buscarUltimos(limite);
-        return Response.ok(ultimos).build();
+    public Response buscarUltimo() {
+        RadarsDTO ultimo = radarsService.buscarUltimo();
+        if (ultimo == null) {
+            return Response.status(Response.Status.NOT_FOUND)
+                    .entity("Nenhum registro encontrado no MonitoraSP.")
+                    .build();
+        }
+        return Response.ok(ultimo).build();
     }
 
     // ═══════════════════════════════════════════════════════════════
