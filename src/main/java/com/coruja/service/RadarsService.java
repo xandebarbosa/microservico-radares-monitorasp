@@ -3,19 +3,32 @@ package com.coruja.service;
 import com.coruja.dto.PageMetadata;
 import com.coruja.dto.RadarPageDTO;
 import com.coruja.dto.RadarsDTO;
+import com.coruja.dto.RodoviaDTO;
 import com.coruja.entity.Radars;
+import com.coruja.messaging.RadarMqPublisher;
 import com.coruja.repository.RadarsRepository;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Aggregates;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Sorts;
+import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.NotFoundException;
 import org.bson.Document;
+import org.bson.conversions.Bson;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jboss.logging.Logger;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.time.format.DateTimeParseException;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -24,144 +37,452 @@ import java.util.stream.Collectors;
 public class RadarsService {
 
     private static final Logger LOG = Logger.getLogger(RadarsService.class);
+
     private static final DateTimeFormatter MONGO_DATE_FMT = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    private static final DateTimeFormatter MONGO_TIME_FMT = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+    private static final List<DateTimeFormatter> DATE_FORMATTERS = List.of(
+            MONGO_DATE_FMT,
+            DateTimeFormatter.ofPattern("yyyy-MM-dd"),
+            DateTimeFormatter.ofPattern("yyyy/MM/dd")
+    );
+
+    private static final List<DateTimeFormatter> TIME_FORMATTERS = List.of(
+            DateTimeFormatter.ofPattern("HH:mm:ss"),
+            DateTimeFormatter.ofPattern("HH:mm")
+    );
 
     // Regex para extrair "SP 310" e "240.40" de "Rodovia: SP 310 KM:240.40"
-    private static final Pattern LOCAL_PATTERN = Pattern.compile("(?i)Rodovia:\\s*(.*?)\\s*KM:\\s*(.*)");
+    // Regex refatorado para garantir a captura apenas da parte numérica do KM
+    // Suporta inteiros, 2 ou 3 casas decimais, usando ponto ou vírgula
+    private static final Pattern LOCAL_PATTERN = Pattern.compile("(?i)Rodovia:\\s*(.*?)\\s*KM:\\s*([0-9]+(?:[.,][0-9]+)?)");
+
+    // ─── Cache em memória ───────────────────────────────────────────────────
+    private volatile List<RodoviaDTO> cachedRodoviasDTOs = null;
+    private volatile Map<Long, String> cachedRodoviaIdToName = null;
+    private volatile Map<String, List<String>> cachedKmsPorRodovia   = null;
+    private volatile Instant rodoviasCacheTime = Instant.EPOCH;
+
+    private final ConcurrentHashMap<String, List<String>> cachedKms =
+            new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<String, java.time.Instant> kmsCacheTime =
+            new ConcurrentHashMap<>();
+
+    // TTL de 1 hora — locais de radar mudam raramente
+    private static final long CACHE_TTL_SEGUNDOS = 3600L;
+
+    // Janela de dias para usar o índice por DATA
+    // 7 dias garante cobertura de todos os locais ativos
+    // sem varrer os 170M documentos inteiros
+    private static final int JANELA_DIAS_LOCAL = 7;
 
     @Inject
     RadarsRepository radarsRepository;
 
-    public RadarPageDTO buscarComFiltros(String placa, String rodovia, String km, String sentido,
-                                         LocalDate data, LocalTime horaInicial, LocalTime horaFinal,
-                                         int page, int size) {
+    @Inject
+    RadarMqPublisher mqPublisher;
+
+    @Inject
+    MongoClient mongoClient;
+
+    @ConfigProperty(name = "quarkus.mongodb.database", defaultValue = "Veiculos")
+    String databaseName;
+
+    // ═══════════════════════════════════════════════════════════════
+    //  STARTUP — pré-aquece cache em background
+    // ═══════════════════════════════════════════════════════════════
+
+    @PostConstruct
+    public void preAquecerCache() {
+        new Thread(() -> {
+            try {
+                // Aguarda serviço estar totalmente disponível
+                Thread.sleep(15_000);
+                LOG.info("🔥 Pré-aquecendo cache de rodovias (background)...");
+                listarRodovias();
+                LOG.info("✅ Cache pré-aquecido com sucesso.");
+            } catch (Exception e) {
+                LOG.warnf("⚠️ Falha no pré-aquecimento: %s", e.getMessage());
+            }
+        }, "cache-warmup-monitorasp").start();
+    }
+
+    /**
+     * Executa UMA aggregation que traz todos os LOCALs distintos.
+     * Extrai rodovias e KMs simultaneamente e cacheia tudo junto.
+     * Elimina a segunda aggregation que causava os 22s de espera.
+     */
+    private void atualizarCache() {
+
+        LOG.info("Consultando Locais via aggregation (janela de "
+                + JANELA_DIAS_LOCAL + " dias)...");
+        long inicio = System.currentTimeMillis();
+
+        List<String> datasRecentes = buildDateRange(JANELA_DIAS_LOCAL);
+
+        List<Bson> pipeline = Arrays.asList(
+                // $match em DATA ativa o índice DATA_1_HORA_1_LOCAL_1_SENTIDO_1
+                Aggregates.match(Filters.in("DATA", datasRecentes)),
+                // $group traz todos os LOCALs únicos
+                new Document("$group", new Document("_id", "$LOCAL")),
+                Aggregates.match(Filters.ne("_id", null)),
+                Aggregates.sort(Sorts.ascending("_id"))
+        );
+
+        List<String> locaisBrutos = getCollection()
+                .aggregate(pipeline)
+                .map(doc -> doc.getString("_id"))
+                .into(new ArrayList<>());
+
+        // Mapeia rodovia → lista de KMs em um único pass
+        Map<String, Set<String>> kmsPorRodoviaTemp = new LinkedHashMap<>();
+
+        for (String local : locaisBrutos) {
+            if (local == null) continue;
+            Matcher matcher = LOCAL_PATTERN.matcher(local);
+            if (matcher.find()) {
+                String rodovia = matcher.group(1).trim();
+                String km      = matcher.group(2).trim();
+                if (!rodovia.isBlank()) {
+                    kmsPorRodoviaTemp
+                            .computeIfAbsent(rodovia, k -> new TreeSet<>())
+                            .add(km);
+                }
+            }
+        }
+
+        // Gera lista de rodovias ordenada com IDs sequenciais estáveis
+        List<String> nomesOrdenados = new ArrayList<>(kmsPorRodoviaTemp.keySet());
+        Collections.sort(nomesOrdenados);
+
+        List<RodoviaDTO>          dtos      = new ArrayList<>();
+        Map<Long, String>         idToName  = new HashMap<>();
+        Map<String, List<String>> kmsCache  = new HashMap<>();
+
+        for (int i = 0; i < nomesOrdenados.size(); i++) {
+            long   id     = (long) (i + 1);
+            String nome   = nomesOrdenados.get(i);
+            List<String> kms = new ArrayList<>(kmsPorRodoviaTemp.get(nome));
+
+            dtos.add(new RodoviaDTO(id, nome));
+            idToName.put(id, nome);
+            kmsCache.put(nome.toLowerCase().trim(), kms);
+        }
+
+        // Atualiza cache atomicamente
+        this.cachedRodoviasDTOs    = dtos;
+        this.cachedRodoviaIdToName = idToName;
+        this.cachedKmsPorRodovia   = kmsCache;
+        this.rodoviasCacheTime     = java.time.Instant.now();
+
+        // LOGS DE KMS
+//        LOG.info("=== KMs CARREGADOS POR RODOVIA ===");
+//        for (Map.Entry<String, List<String>> entry : kmsCache.entrySet()) {
+//            LOG.infof("🛣️ Rodovia: %s | 📍 Total de KMs: %d | Valores: %s",
+//                    entry.getKey().toUpperCase(),
+//                    entry.getValue().size(),
+//                    entry.getValue());
+//        }
+//        LOG.info("==================================");
+
+        LOG.infof("Cache atualizado em %dms — %d rodovias, %d LOCALs distintos.",
+                System.currentTimeMillis() - inicio,
+                dtos.size(),
+                locaisBrutos.size());
+    }
+
+// ─── Verifica se cache está válido ─────────────────────────────────────────
+
+    private boolean cacheValido() {
+        return cachedRodoviasDTOs != null &&
+                java.time.Instant.now().isBefore(
+                        rodoviasCacheTime.plusSeconds(CACHE_TTL_SEGUNDOS));
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  CONSULTA COM FILTROS DINÂMICOS
+    // ═══════════════════════════════════════════════════════════════
+
+    public RadarPageDTO buscarComFiltros(
+            String placa, String rodovia, String km, String sentido,
+            LocalDate data, LocalTime horaInicial, LocalTime horaFinal,
+            int page, int size) {
 
         Document filter = buildFilter(placa, rodovia, km, sentido, data, horaInicial, horaFinal);
+
+        LOG.infof("🔎 Filtro JSON: %s", filter.toJson());
+
+        long totalcOUNT = radarsRepository.countWithFilter(filter);
+        LOG.infof("🔢 Count resultado: %d", totalcOUNT);
+
         long total = radarsRepository.countWithFilter(filter);
 
         if (total == 0) {
-            return new RadarPageDTO(new ArrayList<>(), new PageMetadata(page, size, 0, 0));
+            return new RadarPageDTO(new ArrayList<>(),
+                    new PageMetadata(page, size, 0, 0));
         }
 
-        List<RadarsDTO> content = radarsRepository.findWithFilter(filter, page, size)
-                .stream().map(this::converterParaDTO).collect(Collectors.toList());
+        List<RadarsDTO> content = radarsRepository
+                .findWithFilter(filter, page, size)
+                .stream()
+                .map(this::converterParaDTO)
+                .collect(Collectors.toList());
 
         int totalPages = size == 0 ? 0 : (int) Math.ceil((double) total / size);
+
         return new RadarPageDTO(content, new PageMetadata(page, size, total, totalPages));
     }
 
-    private Document buildFilter(String placa, String rodovia, String km, String sentido,
-                                 LocalDate data, LocalTime horaInicial, LocalTime horaFinal) {
+    private Document buildFilter(String placa, String rodovia, String km,
+                                 String sentido, LocalDate data,
+                                 LocalTime horaInicial, LocalTime horaFinal) {
 
         Document filter = new Document();
-        List<Document> andConditions = new ArrayList<>();
 
+        // ── PLACA ────────────────────────────────────────────────────
         if (placa != null && !placa.isBlank()) {
-            String regexPlaca = ".*" + Pattern.quote(placa.toUpperCase().trim()) + ".*";
-            filter.append("PLACA", new Document("$regex", regexPlaca).append("$options", "i"));
+            // Igualdade exata — placa já normalizada em maiúsculas
+            filter.append("PLACA", placa.toUpperCase().trim());
         }
 
-        // 🔹 BUSCA INTELIGENTE NO CAMPO 'LOCAL'
+        // ── LOCAL — regex único cobre rodovia + km no mesmo campo ────
+        // Formato real: "Rodovia: SP 321 KM:345.20"
+        // Antes usava $and com dois regexes → count retornava 0
         if (rodovia != null && !rodovia.isBlank()) {
-            andConditions.add(new Document("LOCAL", new Document("$regex", "(?i)Rodovia:\\s*" + Pattern.quote(rodovia.trim()) + ".*")));
-        }
-        if (km != null && !km.isBlank()) {
-            andConditions.add(new Document("LOCAL", new Document("$regex", "(?i).*KM:\\s*" + Pattern.quote(km.trim()) + ".*")));
+
+            String regexLocal = (km != null && !km.isBlank())
+                    // Rodovia + KM juntos num único regex
+                    ? "(?i)Rodovia:\\s*"
+                    + Pattern.quote(rodovia.trim())
+                    + ".*KM:\\s*"
+                    + Pattern.quote(km.trim())
+                    // Só rodovia
+                    : "(?i)Rodovia:\\s*"
+                    + Pattern.quote(rodovia.trim())
+                    + ".*";
+
+            filter.append("LOCAL", new Document("$regex", regexLocal));
+
+        } else if (km != null && !km.isBlank()) {
+            // Só KM, sem rodovia
+            filter.append("LOCAL",
+                    new Document("$regex",
+                            "(?i).*KM:\\s*" + Pattern.quote(km.trim()) + ".*"));
         }
 
+        // ── SENTIDO ──────────────────────────────────────────────────
         if (sentido != null && !sentido.isBlank()) {
-            filter.append("SENTIDO", new Document("$regex", "^" + Pattern.quote(sentido.trim()) + "$").append("$options", "i"));
+            filter.append("SENTIDO",
+                    new Document("$regex",
+                            "^" + Pattern.quote(sentido.trim()) + "$")
+                            .append("$options", "i"));
         }
 
+        // ── DATA — ativa o índice DATA_1_HORA_1_LOCAL_1_SENTIDO_1 ───
         if (data != null) {
-            filter.append("DATA", data.format(MONGO_DATE_FMT));
+            filter.append("DATA", data.format(MONGO_DATE_FMT)); // "12/03/2026"
         }
 
+        // ── HORA ─────────────────────────────────────────────────────
         if (horaInicial != null || horaFinal != null) {
             Document horaFilter = new Document();
-            if (horaInicial != null) horaFilter.append("$gte", horaInicial.format(MONGO_TIME_FMT));
-            if (horaFinal != null) horaFilter.append("$lte", horaFinal.format(MONGO_TIME_FMT));
+            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("HH:mm:ss");
+            if (horaInicial != null) horaFilter.append("$gte", horaInicial.format(fmt));
+            if (horaFinal   != null) horaFilter.append("$lte", horaFinal.format(fmt));
             filter.append("HORA", horaFilter);
         }
 
-        if (!andConditions.isEmpty()) {
-            filter.append("$and", andConditions);
-        }
-
         return filter;
-
     }
 
     /**
      * Busca por placa.
      */
     public RadarPageDTO buscarPorPlaca(String placa, int page, int size) {
-        return buscarComFiltros(placa, null, null, null, null, null, null, page, size);
+
+        String placaNormalizada = placa.toUpperCase().trim();
+
+        Document filter = new Document("PLACA", placaNormalizada);
+
+        //Document filter = new Document("PLACA",
+        //        new Document("$regex", "^" + placaNormalizada)
+        //                .append("$options", "i"));
+
+        LOG.infof("🔎 Filtro busca por PLACA JSON: %s", filter.toJson());
+
+        long totalcOUNT = radarsRepository.countWithFilter(filter);
+        LOG.infof("🔢 Count resultado - busca por PLACA: %d", totalcOUNT);
+
+        long total = radarsRepository.countWithFilter(filter);
+
+        if (total == 0) {
+            return new RadarPageDTO(new ArrayList<>(),
+                    new PageMetadata(page, size, 0, 0));
+        }
+
+        LOG.infof("🔢 Total : %d", total);
+
+        // Ordena por DATA desc, HORA desc
+        List<RadarsDTO> content = radarsRepository
+                .findWithFilterSorted(filter, page, size)
+                .stream()
+                .map(this::converterParaDTO)
+                .collect(Collectors.toList());
+
+        LOG.infof("🔢 Resultado da busca por PLACA: %d", content.size());
+
+        int totalPages = size == 0 ? 0 : (int) Math.ceil((double) total / size);
+        return new RadarPageDTO(content, new PageMetadata(page, size, total, totalPages));
     }
 
     /**
      * Busca os útimos registros no banco e os converte para DTOs.
      */
-    public List<RadarsDTO> buscarUltimos(int limite) {
-        return radarsRepository.findUltimos(limite).stream()
-                .map(this::converterParaDTO)
-                .collect(Collectors.toList());
-    }
+//    public List<RadarsDTO> buscarUltimos(int limite) {
+//
+//        // Tenta nos últimos 3 dias primeiro (janela pequena = rápido)
+//        List<String> datasRecentes = buildDateRange(3);
+//        List<Radars> resultados = radarsRepository.findUltimos(limite, datasRecentes);
+//
+//        // Se não encontrou, expande para 30 dias
+//        if (resultados.isEmpty()) {
+//            LOG.infof("Sem registros nos últimos 3 dias, expandindo para 30 dias...");
+//            datasRecentes = buildDateRange(30);
+//            resultados = radarsRepository.findUltimos(limite, datasRecentes);
+//        }
+//
+//        // Se ainda vazio, expande para 90 dias (dados históricos como 28/02)
+//        if (resultados.isEmpty()) {
+//            LOG.infof("Sem registros nos últimos 30 dias, expandindo para 90 dias...");
+//            datasRecentes = buildDateRange(90);
+//            resultados = radarsRepository.findUltimos(limite, datasRecentes);
+//        }
+//
+//        return resultados.stream()
+//                .map(this::converterParaDTO)
+//                .collect(Collectors.toList());
+//    }
 
     // 🔹 NOVO: Busca apenas o último (usado no Dashboard do FrontEnd)
+//    public RadarsDTO buscarUltimo() {
+//        List<RadarsDTO> ultimos = buscarUltimos(1);
+//        return ultimos.isEmpty() ? null : ultimos.get(0);
+//    }
+
+    public List<RadarsDTO> buscarUltimos(int limite) {
+
+        int[] janelas = {7, 30, 90, 365};
+
+        for (int janela : janelas) {
+            List<String> datas = buildDateRange(janela);
+            List<Radars> resultados = radarsRepository.findUltimos(limite, datas);
+
+            if (!resultados.isEmpty()) {
+                LOG.infof("✅ Últimos %d registros encontrados na janela de %d dias.",
+                        resultados.size(), janela);
+                return resultados.stream()
+                        .map(this::converterParaDTO)
+                        .collect(Collectors.toList());
+            }
+
+            LOG.infof("⚠️ Sem registros nos últimos %d dias, expandindo janela...", janela);
+        }
+
+        LOG.warn("⚠️ Nenhum registro encontrado em nenhuma janela de datas.");
+        return new ArrayList<>();
+    }
+
     public RadarsDTO buscarUltimo() {
         List<RadarsDTO> ultimos = buscarUltimos(1);
         return ultimos.isEmpty() ? null : ultimos.get(0);
     }
 
     // ═══════════════════════════════════════════════════════════════
-    //  LISTAGENS PARA COMBOS / DROPDOWNS (BUSCA POR LOCAL)
+    //  LISTAGEM DE RODOVIAS — usa índice composto via aggregation
+    //  com $match em DATA para ativar DATA_1_HORA_1_LOCAL_1_SENTIDO_1
     // ═══════════════════════════════════════════════════════════════
 
-    public List<String> listarRodovias() {
-        // Busca todos os valores únicos do campo LOCAL no MongoDB
-        List<String> locaisBrutos = radarsRepository.mongoCollection()
-                .distinct("LOCAL", String.class)
-                .into(new ArrayList<>());
+    public List<RodoviaDTO> listarRodoviasDTOs() {
+        if (!cacheValido()) {
+            atualizarCache();
+        }
+        return cachedRodoviasDTOs;
+    }
 
-        return locaisBrutos.stream()
-                .filter(local -> local != null)
-                .map(local -> {
-                    Matcher matcher = LOCAL_PATTERN.matcher(local);
-                    return matcher.find() ? matcher.group(1).trim() : null; // Pega apenas a Rodovia (Ex: SP 310)
-                })
-                .filter(rodovia -> rodovia != null && !rodovia.isBlank())
-                .distinct() // Remove duplicatas
-                .sorted()   // Ordem alfabética
+    public List<String> listarRodovias() {
+        return listarRodoviasDTOs().stream()
+                .map(RodoviaDTO::getNome)
                 .collect(Collectors.toList());
     }
 
+    // Lookup direto no mapa cacheado — O(1), sem recomputação
+    public String getRodoviaById(Long id) {
+        if (!cacheValido()) atualizarCache();
+        return cachedRodoviaIdToName != null
+                ? cachedRodoviaIdToName.get(id)
+                : null;
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  LISTAGEM DE KMs — mesma estratégia via índice composto
+    // ═══════════════════════════════════════════════════════════════
+
     public List<String> listarKmsPorRodovia(String rodovia) {
-        if (rodovia == null || rodovia.isBlank()) {
+        if (rodovia == null || rodovia.isBlank()) return new ArrayList<>();
+
+        if (!cacheValido()) atualizarCache();
+
+        String cacheKey = rodovia.toLowerCase().trim();
+        List<String> kms = cachedKmsPorRodovia != null
+                ? cachedKmsPorRodovia.get(cacheKey)
+                : null;
+
+        if (kms == null) {
+            LOG.warnf("Rodovia '%s' não encontrada no cache.", rodovia);
             return new ArrayList<>();
         }
 
-        // Filtra direto no Mongo apenas os locais que contêm a rodovia solicitada
-        Document filter = new Document("LOCAL", new Document("$regex", "(?i)Rodovia:\\s*" + Pattern.quote(rodovia.trim()) + ".*"));
-
-        List<String> locaisBrutos = radarsRepository.mongoCollection()
-                .distinct("LOCAL", filter, String.class)
-                .into(new ArrayList<>());
-
-        return locaisBrutos.stream()
-                .filter(local -> local != null)
-                .map(local -> {
-                    Matcher matcher = LOCAL_PATTERN.matcher(local);
-                    return matcher.find() ? matcher.group(2).trim() : null; // Pega apenas o KM (Ex: 240.40)
-                })
-                .filter(km -> km != null && !km.isBlank())
-                .distinct()
-                .sorted() // Ordem crescente
-                .collect(Collectors.toList());
+        LOG.debugf("KMs de '%s' retornados do cache: %d KMs.", rodovia, kms.size());
+        return kms;
     }
 
-    // 🔹 CONVERSÃO COM SEPARAÇÃO DE TEXTO
+    /**
+     * Persiste uma lista de radares e publica cada um no RabbitMQ.
+     * Mantido para compatibilidade com o endpoint POST /radares/salvar.
+     */
+    public void salvarRadares(List<Radars> radares) {
+        if (radares == null || radares.isEmpty()) return;
+
+        radarsRepository.persist(radares);
+        LOG.infof("%d registros persistidos no MongoDB.", radares.size());
+
+        radares.forEach(mqPublisher::publicar);
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  HELPERS
+    // ═══════════════════════════════════════════════════════════════
+
+    /**
+     * Gera lista de datas no formato dd/MM/yyyy para os últimos N dias.
+     * Usado no $match para ativar o índice composto por DATA.
+     */
+    private List<String> buildDateRange(int dias) {
+        List<String> datas = new ArrayList<>();
+        LocalDate hoje = LocalDate.now();
+        for (int i = 0; i < dias; i++) {
+            datas.add(hoje.minusDays(i).format(MONGO_DATE_FMT));
+        }
+        return datas;
+    }
+
+    /**
+     * Janela de dias para KMs — rodovias com menos movimento
+     * precisam de janela maior para garantir cobertura.
+     */
+    private int JANELA_DIAS_PARA_KM(String rodovia) {
+        return JANELA_DIAS_LOCAL; // pode ser customizado por rodovia se necessário
+    }
+
     private RadarsDTO converterParaDTO(Radars r) {
         String rodovia = "";
         String km = "";
@@ -175,18 +496,24 @@ public class RadarsService {
             rodovia = rawLocal;
         }
 
-        // 🔹 CORREÇÃO: Tratamento de exceção local. Se algum dado no MongoDB estiver corrompido,
-        // usamos data atual em vez de quebrar a API inteira (NullPointerException)
         LocalDate dataConvertida = LocalDate.now();
         if (r.getData() != null && !r.getData().isBlank()) {
-            try { dataConvertida = LocalDate.parse(r.getData(), MONGO_DATE_FMT); }
-            catch (Exception ignored) {}
+            for (DateTimeFormatter fmt : DATE_FORMATTERS) {
+                try {
+                    dataConvertida = LocalDate.parse(r.getData(), fmt);
+                    break;
+                } catch (DateTimeParseException ignored) {}
+            }
         }
 
         LocalTime horaConvertida = LocalTime.MIDNIGHT;
         if (r.getHora() != null && !r.getHora().isBlank()) {
-            try { horaConvertida = LocalTime.parse(r.getHora()); }
-            catch (Exception ignored) {}
+            for (DateTimeFormatter fmt : TIME_FORMATTERS) {
+                try {
+                    horaConvertida = LocalTime.parse(r.getHora(), fmt);
+                    break;
+                } catch (DateTimeParseException ignored) {}
+            }
         }
 
         return RadarsDTO.builder()
@@ -201,4 +528,10 @@ public class RadarsService {
                 .sentido(r.getSentido() != null ? r.getSentido().toUpperCase() : null)
                 .build();
     }
+
+    private MongoCollection<Document> getCollection() {
+        MongoDatabase db = mongoClient.getDatabase(databaseName);
+        return db.getCollection("MonitoraSP");
+    }
+
 }
