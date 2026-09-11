@@ -5,14 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class KmRodoviaDTO implements Serializable {
-    private Long id;
-    private String valor;
-    private Long rodoviaId;
+public class RadarLocationDTO {
+    private String rodovia;
+    private String km;
+    private String concessionaria;
+    private Double latitude;
+    private Double longitude;
 }

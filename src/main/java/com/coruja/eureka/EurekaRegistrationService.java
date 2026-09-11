@@ -7,8 +7,11 @@ import jakarta.enterprise.event.Observes;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.Response;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.eclipse.microprofile.faulttolerance.Retry;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.jboss.logging.Logger;
+
+import java.time.temporal.ChronoUnit;
 
 @ApplicationScoped
 public class EurekaRegistrationService {
@@ -66,7 +69,8 @@ public class EurekaRegistrationService {
         registrar();
     }
 
-    private void registrar() {
+    @Retry(maxRetries = 5, delay = 5, delayUnit = ChronoUnit.SECONDS)
+    public void registrar() {
         try {
             Response response = eurekaClient.register(appName.toUpperCase(), payload);
             if (response.getStatus() == 204 || response.getStatus() == 200) {

@@ -1,9 +1,6 @@
 package com.coruja.resource;
 
-import com.coruja.dto.KmRodoviaDTO;
-import com.coruja.dto.RadarPageDTO;
-import com.coruja.dto.RadarsDTO;
-import com.coruja.dto.RodoviaDTO;
+import com.coruja.dto.*;
 import com.coruja.entity.Radars;
 import com.coruja.service.RadarsService;
 import io.smallrye.common.annotation.Blocking;
@@ -244,6 +241,25 @@ public class RadarsResource {
         return Response.status(Response.Status.CREATED)
                 .entity("Radares MonitoraSP salvos com sucesso!")
                 .build();
+    }
+
+    @GET
+    @Path("/all-locations")
+    @Operation(summary = "Lista todas as rodovias e seus respectivos KMs de uma única vez")
+    @Blocking
+    public Response listarTodasLocalizacoes() {
+        List<RadarLocationDTO> resultado = radarsService.listarTodasLocalizacoes();
+
+        if (resultado.isEmpty()) {
+            return Response.status(Response.Status.NOT_FOUND)
+                    .entity(Map.of(
+                            "status", 404,
+                            "erro", "Nenhuma localização de radar encontrada para a Concessionária MonitoraSP."
+                    ))
+                    .build();
+        }
+
+        return Response.ok(resultado).build();
     }
 
     // ═══════════════════════════════════════════════════════════════

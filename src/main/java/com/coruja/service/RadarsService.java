@@ -1,12 +1,11 @@
 package com.coruja.service;
 
-import com.coruja.dto.PageMetadata;
-import com.coruja.dto.RadarPageDTO;
-import com.coruja.dto.RadarsDTO;
-import com.coruja.dto.RodoviaDTO;
+import com.coruja.dto.*;
 import com.coruja.entity.Radars;
 import com.coruja.messaging.RadarMqPublisher;
 import com.coruja.repository.RadarsRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -22,6 +21,7 @@ import org.bson.conversions.Bson;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jboss.logging.Logger;
 
+import java.io.InputStream;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -84,14 +84,26 @@ public class RadarsService {
     @Inject
     MongoClient mongoClient;
 
+    @Inject
+    ObjectMapper objectMapper;
+
     @ConfigProperty(name = "quarkus.mongodb.database", defaultValue = "Veiculos")
     String databaseName;
+
+    // Dicionário em memória: Chave = "sp 207@16.18", Valor = double[]{latitude, longitude}
+    private final Map<String, double[]> coordenadasFixasMap = new HashMap<>();
 
     // ═══════════════════════════════════════════════════════════════
     //  STARTUP — pré-aquece cache em background
     // ═══════════════════════════════════════════════════════════════
 
+
     @PostConstruct
+    public void inicializar() {
+        preAquecerCache();
+        carregarCoordenadasJson();
+    }
+
     public void preAquecerCache() {
         new Thread(() -> {
             try {
@@ -104,6 +116,30 @@ public class RadarsService {
                 LOG.warnf("⚠️ Falha no pré-aquecimento: %s", e.getMessage());
             }
         }, "cache-warmup-monitorasp").start();
+    }
+
+    private void carregarCoordenadasJson() {
+        LOG.info("📂 Carregando coordenadas reais dos radares via JSON...");
+        try (InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("coordenadas-radares.json")) {
+            if (is != null) {
+                List<Map<String, Object>> lista = objectMapper.readValue(is, new TypeReference<List<Map<String, Object>>>() {});
+                for (Map<String, Object> item : lista) {
+                    String rodovia = ((String) item.get("rodovia")).trim().toLowerCase();
+                    String km = ((String) item.get("km")).trim().toLowerCase();
+                    double lat = ((Number) item.get("latitude")).doubleValue();
+                    double lng = ((Number) item.get("longitude")).doubleValue();
+
+                    // Cria uma chave única de busca combinando Rodovia e KM
+                    coordenadasFixasMap.put(rodovia + "@" + km, new double[]{lat, lng});
+                }
+                LOG.infof("✅ %d coordenadas estáticas carregadas com sucesso.", coordenadasFixasMap.size());
+            } else {
+                LOG.warn("⚠️ Arquivo 'coordenadas-radares.json' não encontrado na pasta resources.");
+            }
+        } catch (Exception e) {
+            LOG.errorf(e, "❌ Falha crítica ao processar o arquivo de coordenadas JSON. " +
+                    "Verifique se o formato está correto. Erro: %s", e.getMessage());
+        }
     }
 
     /**
@@ -456,6 +492,60 @@ public class RadarsService {
         LOG.infof("%d registros persistidos no MongoDB.", radares.size());
 
         radares.forEach(mqPublisher::publicar);
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  RETORNA TODAS AS LOCALIZAÇÕES (RODOVIAS E KMS) DE UMA VEZ
+    // ═══════════════════════════════════════════════════════════════
+    public List<RadarLocationDTO> listarTodasLocalizacoes() {
+        if (!cacheValido()) {
+            atualizarCache();
+        }
+
+        List<RadarLocationDTO> localizacoesPlanas = new ArrayList<>();
+
+        if (cachedKmsPorRodovia != null) {
+            cachedKmsPorRodovia.forEach((rodovia, listaKms) -> {
+                for (String km : listaKms) {
+
+                    // Gera as coordenadas fixas baseadas no nome
+                    double[] coords = buscarCoordenadas(rodovia, km);
+
+                    localizacoesPlanas.add(RadarLocationDTO.builder()
+                            .rodovia(rodovia.toUpperCase().trim())
+                            .km(km.trim())
+                            .concessionaria("MonitoraSP")
+                            .latitude(coords[0])
+                            .longitude(coords[1])
+                            .build());
+                }
+            });
+        }
+
+        return localizacoesPlanas;
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  BUSCA COORDENADAS REAIS COM FALLBACK DETERMINÍSTICO
+    // ═══════════════════════════════════════════════════════════════
+    private double[] buscarCoordenadas(String rodovia, String km) {
+        String chave = rodovia.trim().toLowerCase() + "@" + km.trim().toLowerCase();
+
+        // 1. Tenta buscar a coordenada exata mapeada no seu arquivo .json
+        if (coordenadasFixasMap.containsKey(chave)) {
+            return coordenadasFixasMap.get(chave);
+        }
+
+        // 2. FALLBACK: Radar novo não cadastrado no JSON.
+        // Usa o algoritmo determinístico para gerar uma posição estimada e manter no mapa.
+        int hash = Math.abs(chave.hashCode());
+        double latBase = -22.3145;
+        double lngBase = -49.0587;
+
+        double desvioLat = ((hash % 1000) / 1000.0) * 3.0 - 1.5;
+        double desvioLng = (((hash / 1000) % 1000) / 1000.0) * 3.0 - 1.5;
+
+        return new double[]{latBase + desvioLat, lngBase + desvioLng};
     }
 
     // ═══════════════════════════════════════════════════════════════

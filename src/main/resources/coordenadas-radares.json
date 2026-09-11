@@ -1,0 +1,4046 @@
+[
+  {
+    "rodovia": "SP 008",
+    "km": "114.55",
+    "latitude": -22.772223,
+    "longitude": -46.560607
+  },
+  {
+    "rodovia": "SP 008",
+    "km": "119.03",
+    "latitude": -22.735019,
+    "longitude": -46.564357
+  },
+  {
+    "rodovia": "SP 008",
+    "km": "132.52",
+    "latitude": -22.629144,
+    "longitude": -46.534265
+  },
+  {
+    "rodovia": "SP 008",
+    "km": "135.30",
+    "latitude": -22.607523,
+    "longitude": -46.526267
+  },
+  {
+    "rodovia": "SP 008",
+    "km": "34.29",
+    "latitude": -23.311808,
+    "longitude": -46.577773
+  },
+  {
+    "rodovia": "SP 008",
+    "km": "35.55",
+    "latitude": -22.93777,
+    "longitude": -46.556616
+  },
+  {
+    "rodovia": "SP 008",
+    "km": "93.60",
+    "latitude": -22.93777,
+    "longitude": -46.556616
+  },
+  {
+    "rodovia": "SP 008",
+    "km": "96.86",
+    "latitude": -22.910293,
+    "longitude": -46.546438
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "40.00",
+    "latitude": -23.71726,
+    "longitude": -46.81147
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "45.20",
+    "latitude": -23.75345,
+    "longitude": -46.79788
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "53.20",
+    "latitude": -23.79901,
+    "longitude": -46.74432
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "61.50",
+    "latitude": -23.80034,
+    "longitude": -46.6683
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "76.00",
+    "latitude": -23.76327,
+    "longitude": -46.5434
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "90.50",
+    "latitude": -23.70855,
+    "longitude": -46.43223
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "95.70",
+    "latitude": -23.67669,
+    "longitude": -46.39944
+  },
+  {
+    "rodovia": "SP 021",
+    "km": "97.00",
+    "latitude": -23.66629,
+    "longitude": -46.39468
+  },
+  {
+    "rodovia": "SP 023",
+    "km": "37.85",
+    "latitude": -23.339888,
+    "longitude": -46.738168
+  },
+  {
+    "rodovia": "SP 023",
+    "km": "41.30",
+    "latitude": -23.334684,
+    "longitude": -46.720504
+  },
+  {
+    "rodovia": "SP 023",
+    "km": "41.90",
+    "latitude": -23.331685,
+    "longitude": -46.716613
+  },
+  {
+    "rodovia": "SP 023",
+    "km": "44.00",
+    "latitude": -23.330783,
+    "longitude": -46.701277
+  },
+  {
+    "rodovia": "SP 023",
+    "km": "47.00",
+    "latitude": -23.332721,
+    "longitude": -46.684422
+  },
+  {
+    "rodovia": "SP 023",
+    "km": "48.59",
+    "latitude": -23.337703,
+    "longitude": -46.65872
+  },
+  {
+    "rodovia": "SP 023",
+    "km": "53.13",
+    "latitude": -23.331865,
+    "longitude": -46.622108
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "35.00",
+    "latitude": -23.781874,
+    "longitude": -46.488957
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "41.53",
+    "latitude": -23.739892,
+    "longitude": -46.44146
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "53.90",
+    "latitude": -23.677223,
+    "longitude": -46.351572
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "57.67",
+    "latitude": -23.649952,
+    "longitude": -46.325568
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "58.75",
+    "latitude": -23.644153,
+    "longitude": -46.322635
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "59.76",
+    "latitude": -23.633247,
+    "longitude": -46.324563
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "65.76",
+    "latitude": -23.590485,
+    "longitude": -46.30666
+  },
+  {
+    "rodovia": "SP 031",
+    "km": "66.21",
+    "latitude": -23.586988,
+    "longitude": -46.308174
+  },
+  {
+    "rodovia": "SP 036",
+    "km": "55.00",
+    "latitude": -23.227856,
+    "longitude": -46.407335
+  },
+  {
+    "rodovia": "SP 036",
+    "km": "78.60",
+    "latitude": -23.109237,
+    "longitude": -46.469149
+  },
+  {
+    "rodovia": "SP 036",
+    "km": "80.93",
+    "latitude": -23.099382,
+    "longitude": -46.449525
+  },
+  {
+    "rodovia": "SP 036",
+    "km": "84.86",
+    "latitude": -23.088437,
+    "longitude": -46.414109
+  },
+  {
+    "rodovia": "SP 036",
+    "km": "84.90",
+    "latitude": -23.087971,
+    "longitude": -46.413866
+  },
+  {
+    "rodovia": "SP 036",
+    "km": "89.78",
+    "latitude": -23.066062,
+    "longitude": -46.375232
+  },
+  {
+    "rodovia": "SP 039",
+    "km": "51.60",
+    "latitude": -23.607644,
+    "longitude": -46.255205
+  },
+  {
+    "rodovia": "SP 039",
+    "km": "60.42",
+    "latitude": -23.671041,
+    "longitude": -46.227674
+  },
+  {
+    "rodovia": "SP 042",
+    "km": "162.64",
+    "latitude": -22.71675,
+    "longitude": -45.727813
+  },
+  {
+    "rodovia": "SP 046",
+    "km": "154.22",
+    "latitude": -22.826348,
+    "longitude": -45.718998
+  },
+  {
+    "rodovia": "SP 046",
+    "km": "165.41",
+    "latitude": -22.82769,
+    "longitude": -45.63702
+  },
+  {
+    "rodovia": "SP 050",
+    "km": "102.64",
+    "latitude": -23.10129,
+    "longitude": -45.918249
+  },
+  {
+    "rodovia": "SP 050",
+    "km": "128.10",
+    "latitude": -22.924755,
+    "longitude": -45.826305
+  },
+  {
+    "rodovia": "SP 052",
+    "km": "212.28",
+    "latitude": -22.63516,
+    "longitude": -44.973871
+  },
+  {
+    "rodovia": "SP 052",
+    "km": "218.34",
+    "latitude": -22.584226,
+    "longitude": -44.981472
+  },
+  {
+    "rodovia": "SP 052",
+    "km": "220.50",
+    "latitude": -22.572337,
+    "longitude": -44.994556
+  },
+  {
+    "rodovia": "SP 052",
+    "km": "228.46",
+    "latitude": -22.514067,
+    "longitude": -45.016865
+  },
+  {
+    "rodovia": "SP 052",
+    "km": "232.57",
+    "latitude": -22.488088,
+    "longitude": -45.013661
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "114.26",
+    "latitude": -23.725271,
+    "longitude": -45.4218
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "119.95",
+    "latitude": -23.748566,
+    "longitude": -45.410333
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "136.40",
+    "latitude": -23.817098,
+    "longitude": -45.459781
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "137.15",
+    "latitude": -23.816232,
+    "longitude": -45.464183
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "141.22",
+    "latitude": -23.828931,
+    "longitude": -45.493749
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "147.75",
+    "latitude": -23.813885,
+    "longitude": -45.529984
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "150.80",
+    "latitude": -23.798466,
+    "longitude": -45.542336
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "154.68",
+    "latitude": -23.790369,
+    "longitude": -45.565944
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "156.20",
+    "latitude": -23.788657,
+    "longitude": -45.585775
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "156.97",
+    "latitude": -23.787389,
+    "longitude": -45.589124
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "160.55",
+    "latitude": -23.781928,
+    "longitude": -45.60728
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "163.40",
+    "latitude": -23.783335,
+    "longitude": -45.630696
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "165.90",
+    "latitude": -23.77077,
+    "longitude": -45.63883
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "177.22",
+    "latitude": -23.758289,
+    "longitude": -45.723186
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "178.10",
+    "latitude": -23.750839,
+    "longitude": -45.726078
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "179.30",
+    "latitude": -23.742489,
+    "longitude": -45.732284
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "188.50",
+    "latitude": -23.755163,
+    "longitude": -45.815584
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "189.50",
+    "latitude": -23.754464,
+    "longitude": -45.82517
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "192.46",
+    "latitude": -23.756202,
+    "longitude": -45.849659
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "195.43",
+    "latitude": -23.755851,
+    "longitude": -45.878212
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "205.16",
+    "latitude": -23.77787,
+    "longitude": -45.967203
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "73.15",
+    "latitude": -23.518827,
+    "longitude": -45.202088
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "79.80",
+    "latitude": -23.55329,
+    "longitude": -45.250128
+  },
+  {
+    "rodovia": "SP 055",
+    "km": "80.80",
+    "latitude": -23.5603,
+    "longitude": -45.254927
+  },
+  {
+    "rodovia": "SP 056",
+    "km": "63.46",
+    "latitude": -23.288568,
+    "longitude": -46.23234
+  },
+  {
+    "rodovia": "SP 056",
+    "km": "65.30",
+    "latitude": -23.279428,
+    "longitude": -46.239359
+  },
+  {
+    "rodovia": "SP 056",
+    "km": "77.19",
+    "latitude": -23.214226,
+    "longitude": -46.165982
+  },
+  {
+    "rodovia": "SP 058",
+    "km": "213.65",
+    "latitude": -22.599943,
+    "longitude": -45.006991
+  },
+  {
+    "rodovia": "SP 058",
+    "km": "214.50",
+    "latitude": -22.598152,
+    "longitude": -44.998327
+  },
+  {
+    "rodovia": "SP 062",
+    "km": "117.53",
+    "latitude": -23.070769,
+    "longitude": -45.662979
+  },
+  {
+    "rodovia": "SP 062",
+    "km": "156.60",
+    "latitude": -22.894023,
+    "longitude": -45.392332
+  },
+  {
+    "rodovia": "SP 062",
+    "km": "157.95",
+    "latitude": -22.890151,
+    "longitude": -45.379515
+  },
+  {
+    "rodovia": "SP 062",
+    "km": "165.09",
+    "latitude": -22.891621,
+    "longitude": -45.324568
+  },
+  {
+    "rodovia": "SP 062",
+    "km": "183.80",
+    "latitude": -22.765033,
+    "longitude": -45.14726
+  },
+  {
+    "rodovia": "SP 062",
+    "km": "185.32",
+    "latitude": -22.753687,
+    "longitude": -45.1386
+  },
+  {
+    "rodovia": "SP 063",
+    "km": "26.85",
+    "latitude": -22.983263,
+    "longitude": -46.783465
+  },
+  {
+    "rodovia": "SP 063",
+    "km": "29.08",
+    "latitude": -22.978769,
+    "longitude": -46.763031
+  },
+  {
+    "rodovia": "SP 063",
+    "km": "32.51",
+    "latitude": -22.976347,
+    "longitude": -46.73137
+  },
+  {
+    "rodovia": "SP 063",
+    "km": "42.35",
+    "latitude": -22.944785,
+    "longitude": -46.653268
+  },
+  {
+    "rodovia": "SP 063",
+    "km": "53.25",
+    "latitude": -22.969118,
+    "longitude": -46.568319
+  },
+  {
+    "rodovia": "SP 066",
+    "km": "100.50",
+    "latitude": -23.265647,
+    "longitude": -45.929483
+  },
+  {
+    "rodovia": "SP 066",
+    "km": "102.40",
+    "latitude": -23.27129,
+    "longitude": -45.918488
+  },
+  {
+    "rodovia": "SP 066",
+    "km": "62.70",
+    "latitude": -23.468828,
+    "longitude": -46.113003
+  },
+  {
+    "rodovia": "SP 066",
+    "km": "82.33",
+    "latitude": -23.370969,
+    "longitude": -46.045071
+  },
+  {
+    "rodovia": "SP 066",
+    "km": "90.00",
+    "latitude": -23.327093,
+    "longitude": -45.996487
+  },
+  {
+    "rodovia": "SP 068",
+    "km": "208.57",
+    "latitude": -22.656701,
+    "longitude": -44.933595
+  },
+  {
+    "rodovia": "SP 073",
+    "km": "3.74",
+    "latitude": -22.96395,
+    "longitude": -47.07984
+  },
+  {
+    "rodovia": "SP 075",
+    "km": "41.07",
+    "latitude": -23.17953,
+    "longitude": -47.29057
+  },
+  {
+    "rodovia": "SP 075",
+    "km": "46.10",
+    "latitude": -23.153737,
+    "longitude": -47.257397
+  },
+  {
+    "rodovia": "SP 075",
+    "km": "52.35",
+    "latitude": -23.115446,
+    "longitude": -47.214436
+  },
+  {
+    "rodovia": "SP 075",
+    "km": "53.12",
+    "latitude": -23.111155,
+    "longitude": -47.209285
+  },
+  {
+    "rodovia": "SP 075",
+    "km": "67.60",
+    "latitude": -23.0133773,
+    "longitude": -47.1174072
+  },
+  {
+    "rodovia": "SP 075",
+    "km": "68.95",
+    "latitude": -23.0027325,
+    "longitude": -47.1117328
+  },
+  {
+    "rodovia": "SP 077",
+    "km": "2.24",
+    "latitude": -23.310652,
+    "longitude": -45.934019
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "38.75",
+    "latitude": -23.2131,
+    "longitude": -47.296624
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "48.70",
+    "latitude": -23.285457,
+    "longitude": -47.292122
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "52.55",
+    "latitude": -23.315608,
+    "longitude": -47.302143
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "53.15",
+    "latitude": -23.322592,
+    "longitude": -47.300459
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "56.80",
+    "latitude": -23.353256,
+    "longitude": -47.308348
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "58.00",
+    "latitude": -23.362835,
+    "longitude": -47.30853
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "59.20",
+    "latitude": -23.370892,
+    "longitude": -47.315828
+  },
+  {
+    "rodovia": "SP 079",
+    "km": "59.75",
+    "latitude": -23.371935,
+    "longitude": -47.321281
+  },
+  {
+    "rodovia": "SP 088",
+    "km": "126.68",
+    "latitude": -23.550093,
+    "longitude": -45.604394
+  },
+  {
+    "rodovia": "SP 088",
+    "km": "59.00",
+    "latitude": -23.542085,
+    "longitude": -46.153719
+  },
+  {
+    "rodovia": "SP 088",
+    "km": "61.02",
+    "latitude": -23.559047,
+    "longitude": -46.144608
+  },
+  {
+    "rodovia": "SP 088",
+    "km": "68.09",
+    "latitude": -23.566221,
+    "longitude": -46.086182
+  },
+  {
+    "rodovia": "SP 088",
+    "km": "73.37",
+    "latitude": -23.569468,
+    "longitude": -46.039641
+  },
+  {
+    "rodovia": "SP 091",
+    "km": "92.19",
+    "latitude": -22.947171,
+    "longitude": -47.028199
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "44.00",
+    "latitude": -22.720978,
+    "longitude": -46.789159
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "46.00",
+    "latitude": -22.71947,
+    "longitude": -46.807242
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "49.20",
+    "latitude": -22.709319,
+    "longitude": -46.835403
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "54.46",
+    "latitude": -22.734703,
+    "longitude": -46.869626
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "64.01",
+    "latitude": -22.720215,
+    "longitude": -46.933057
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "65.05",
+    "latitude": -22.718758,
+    "longitude": -46.939183
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "68.38",
+    "latitude": -22.706523,
+    "longitude": -46.965941
+  },
+  {
+    "rodovia": "SP 095",
+    "km": "7.90",
+    "latitude": -22.888644,
+    "longitude": -46.607085
+  },
+  {
+    "rodovia": "SP 097",
+    "km": "1.10",
+    "latitude": -23.441117,
+    "longitude": -47.515051
+  },
+  {
+    "rodovia": "SP 097",
+    "km": "10.20",
+    "latitude": -23.367528,
+    "longitude": -47.533881
+  },
+  {
+    "rodovia": "SP 097",
+    "km": "19.40",
+    "latitude": -23.287804,
+    "longitude": -47.528272
+  },
+  {
+    "rodovia": "SP 097",
+    "km": "2.18",
+    "latitude": -23.432331,
+    "longitude": -47.51612
+  },
+  {
+    "rodovia": "SP 097",
+    "km": "9.22",
+    "latitude": -23.37341,
+    "longitude": -47.528654
+  },
+  {
+    "rodovia": "SP 099",
+    "km": "18.00",
+    "latitude": -23.3091186,
+    "longitude": -45.7663267
+  },
+  {
+    "rodovia": "SP 099",
+    "km": "27.40",
+    "latitude": -23.3472769,
+    "longitude": -45.7096961
+  },
+  {
+    "rodovia": "SP 099",
+    "km": "30.20",
+    "latitude": -23.3641069,
+    "longitude": -45.6907999
+  },
+  {
+    "rodovia": "SP 099",
+    "km": "42.70",
+    "latitude": -23.441082,
+    "longitude": -45.6114394
+  },
+  {
+    "rodovia": "SP 099",
+    "km": "56.40",
+    "latitude": -23.5304907,
+    "longitude": -45.5384749
+  },
+  {
+    "rodovia": "SP 099",
+    "km": "64.13",
+    "latitude": -23.5745115,
+    "longitude": -45.4868142
+  },
+  {
+    "rodovia": "SP 099",
+    "km": "81.70",
+    "latitude": -23.6123712,
+    "longitude": -45.4305815
+  },
+  {
+    "rodovia": "SP 102",
+    "km": "72.05",
+    "latitude": -23.656081,
+    "longitude": -46.201236
+  },
+  {
+    "rodovia": "SP 102",
+    "km": "72.40",
+    "latitude": -23.658537,
+    "longitude": -46.203061
+  },
+  {
+    "rodovia": "SP 107",
+    "km": "37.69",
+    "latitude": -22.606487,
+    "longitude": -47.094386
+  },
+  {
+    "rodovia": "SP 107",
+    "km": "44.00",
+    "latitude": -22.586761,
+    "longitude": -47.148472
+  },
+  {
+    "rodovia": "SP 121",
+    "km": "17.95",
+    "latitude": -23.292017,
+    "longitude": -45.518242
+  },
+  {
+    "rodovia": "SP 122",
+    "km": "40.34",
+    "latitude": -23.753456,
+    "longitude": -46.39711
+  },
+  {
+    "rodovia": "SP 122",
+    "km": "45.02",
+    "latitude": -23.772789,
+    "longitude": -46.365645
+  },
+  {
+    "rodovia": "SP 123",
+    "km": "1.20",
+    "latitude": -23.047315,
+    "longitude": -45.626563
+  },
+  {
+    "rodovia": "SP 123",
+    "km": "12.61",
+    "latitude": -22.955243,
+    "longitude": -45.623217
+  },
+  {
+    "rodovia": "SP 123",
+    "km": "28.79",
+    "latitude": -22.860013,
+    "longitude": -45.621797
+  },
+  {
+    "rodovia": "SP 123",
+    "km": "30.91",
+    "latitude": -22.846068,
+    "longitude": -45.615597
+  },
+  {
+    "rodovia": "SP 123",
+    "km": "42.69",
+    "latitude": -22.77703,
+    "longitude": -45.61247
+  },
+  {
+    "rodovia": "SP 123",
+    "km": "5.76",
+    "latitude": -23.012657,
+    "longitude": -45.641168
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "25.09",
+    "latitude": -23.199108,
+    "longitude": -45.436418
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "27.04",
+    "latitude": -23.207826,
+    "longitude": -45.422963
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "42.85",
+    "latitude": -23.228702,
+    "longitude": -45.313562
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "46.72",
+    "latitude": -23.253742,
+    "longitude": -45.29631
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "66.29",
+    "latitude": -23.359153,
+    "longitude": -45.202844
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "74.00",
+    "latitude": -23.380229,
+    "longitude": -45.157317
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "77.00",
+    "latitude": -23.364226,
+    "longitude": -45.139321
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "88.30",
+    "latitude": -23.400733,
+    "longitude": -45.119307
+  },
+  {
+    "rodovia": "SP 125",
+    "km": "9.35",
+    "latitude": -23.108282,
+    "longitude": -45.524709
+  },
+  {
+    "rodovia": "SP 129",
+    "km": "13.25",
+    "latitude": -23.276613,
+    "longitude": -47.695033
+  },
+  {
+    "rodovia": "SP 129",
+    "km": "53.50",
+    "latitude": -23.383742,
+    "longitude": -48.025738
+  },
+  {
+    "rodovia": "SP 132",
+    "km": "159.38",
+    "latitude": -22.887265,
+    "longitude": -45.540987
+  },
+  {
+    "rodovia": "SP 133",
+    "km": "5.68",
+    "latitude": -22.628769,
+    "longitude": -47.277668
+  },
+  {
+    "rodovia": "SP 135",
+    "km": "13.61",
+    "latitude": -22.736739,
+    "longitude": -47.540643
+  },
+  {
+    "rodovia": "SP 135",
+    "km": "17.55",
+    "latitude": -22.741429,
+    "longitude": -47.576188
+  },
+  {
+    "rodovia": "SP 135",
+    "km": "18.02",
+    "latitude": -22.742293,
+    "longitude": -47.579685
+  },
+  {
+    "rodovia": "SP 135",
+    "km": "18.90",
+    "latitude": -22.739364,
+    "longitude": -47.588593
+  },
+  {
+    "rodovia": "SP 135",
+    "km": "18.95",
+    "latitude": -22.738483,
+    "longitude": -47.592186
+  },
+  {
+    "rodovia": "SP 135",
+    "km": "5.60",
+    "latitude": -22.740114,
+    "longitude": -47.472991
+  },
+  {
+    "rodovia": "SP 139",
+    "km": "1.86",
+    "latitude": -24.492924,
+    "longitude": -47.857979
+  },
+  {
+    "rodovia": "SP 139",
+    "km": "107.10",
+    "latitude": -23.848585,
+    "longitude": -48.030646
+  },
+  {
+    "rodovia": "SP 139",
+    "km": "49.94",
+    "latitude": -24.183606,
+    "longitude": -47.928006
+  },
+  {
+    "rodovia": "SP 139",
+    "km": "56.84",
+    "latitude": -24.169474,
+    "longitude": -47.968449
+  },
+  {
+    "rodovia": "SP 139",
+    "km": "63.73",
+    "latitude": -24.143401,
+    "longitude": -47.989819
+  },
+  {
+    "rodovia": "SP 139",
+    "km": "98.75",
+    "latitude": -23.893937,
+    "longitude": -48.01072
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "0.80",
+    "latitude": -23.529456,
+    "longitude": -47.727884
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "19.40",
+    "latitude": -23.389108,
+    "longitude": -47.776584
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "22.28",
+    "latitude": -23.372891,
+    "longitude": -47.79806
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "24.65",
+    "latitude": -23.35619,
+    "longitude": -47.808268
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "42.90",
+    "latitude": -23.261252,
+    "longitude": -47.931602
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "5.52",
+    "latitude": -23.491724,
+    "longitude": -47.741465
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "5.95",
+    "latitude": -23.487867,
+    "longitude": -47.741194
+  },
+  {
+    "rodovia": "SP 141",
+    "km": "61.35",
+    "latitude": -23.212366,
+    "longitude": -48.070734
+  },
+  {
+    "rodovia": "SP 147",
+    "km": "155.65",
+    "latitude": -22.744698,
+    "longitude": -47.710444
+  },
+  {
+    "rodovia": "SP 147",
+    "km": "39.28",
+    "latitude": -22.460494,
+    "longitude": -46.790302
+  },
+  {
+    "rodovia": "SP 147",
+    "km": "9.10",
+    "latitude": -22.555395,
+    "longitude": -46.583843
+  },
+  {
+    "rodovia": "SP 148",
+    "km": "31.81",
+    "latitude": -23.781933,
+    "longitude": -46.506647
+  },
+  {
+    "rodovia": "SP 148",
+    "km": "37.52",
+    "latitude": -22.572734,
+    "longitude": -47.474571
+  },
+  {
+    "rodovia": "SP 151",
+    "km": "3.60",
+    "latitude": -22.572734,
+    "longitude": -47.474571
+  },
+  {
+    "rodovia": "SP 151",
+    "km": "5.44",
+    "latitude": -22.575528,
+    "longitude": -47.491064
+  },
+  {
+    "rodovia": "SP 151",
+    "km": "9.03",
+    "latitude": -22.577025,
+    "longitude": -47.530522
+  },
+  {
+    "rodovia": "SP 153",
+    "km": "21.37",
+    "latitude": -23.096598,
+    "longitude": -45.195188
+  },
+  {
+    "rodovia": "SP 153",
+    "km": "6.30",
+    "latitude": -23.177871,
+    "longitude": -45.286375
+  },
+  {
+    "rodovia": "SP 157",
+    "km": "22.50",
+    "latitude": -23.492781,
+    "longitude": -48.17694
+  },
+  {
+    "rodovia": "SP 157",
+    "km": "51.45",
+    "latitude": -23.265698,
+    "longitude": -48.146458
+  },
+  {
+    "rodovia": "SP 157",
+    "km": "52.63",
+    "latitude": -23.259587,
+    "longitude": -48.138325
+  },
+  {
+    "rodovia": "SP 165",
+    "km": "105.04",
+    "latitude": -24.600642,
+    "longitude": -48.361038
+  },
+  {
+    "rodovia": "SP 165",
+    "km": "79.42",
+    "latitude": -24.564827,
+    "longitude": -48.151041
+  },
+  {
+    "rodovia": "SP 171",
+    "km": "19.90",
+    "latitude": -22.921508,
+    "longitude": -45.095641
+  },
+  {
+    "rodovia": "SP 171",
+    "km": "2.45",
+    "latitude": -22.8378,
+    "longitude": -45.181166
+  },
+  {
+    "rodovia": "SP 171",
+    "km": "32.00",
+    "latitude": -22.99653,
+    "longitude": -45.044605
+  },
+  {
+    "rodovia": "SP 171",
+    "km": "46.90",
+    "latitude": -23.080147,
+    "longitude": -44.965362
+  },
+  {
+    "rodovia": "SP 181",
+    "km": "2.45",
+    "latitude": -24.037993,
+    "longitude": -48.34656
+  },
+  {
+    "rodovia": "SP 181",
+    "km": "6.80",
+    "latitude": -24.072909,
+    "longitude": -48.362286
+  },
+  {
+    "rodovia": "SP 191",
+    "km": "160.00",
+    "latitude": -22.68163,
+    "longitude": -48.25511
+  },
+  {
+    "rodovia": "SP 191",
+    "km": "180.86",
+    "latitude": -22.72631,
+    "longitude": -48.43951
+  },
+  {
+    "rodovia": "SP 191",
+    "km": "186.00",
+    "latitude": -22.75138,
+    "longitude": -48.48204
+  },
+  {
+    "rodovia": "SP 191",
+    "km": "82.62",
+    "latitude": -22.4062041,
+    "longitude": -47.6762083
+  },
+  {
+    "rodovia": "SP 193",
+    "km": "18.20",
+    "latitude": -24.649216,
+    "longitude": -48.03824
+  },
+  {
+    "rodovia": "SP 193",
+    "km": "7.00",
+    "latitude": -24.58059,
+    "longitude": -48.107723
+  },
+  {
+    "rodovia": "SP 193",
+    "km": "8.80",
+    "latitude": -24.595301,
+    "longitude": -48.099905
+  },
+  {
+    "rodovia": "SP 197",
+    "km": "6.60",
+    "latitude": -22.343923,
+    "longitude": -48.109369
+  },
+  {
+    "rodovia": "SP 201",
+    "km": "0.97",
+    "latitude": -21.980744,
+    "longitude": -47.412185
+  },
+  {
+    "rodovia": "SP 201",
+    "km": "5.98",
+    "latitude": -21.948354,
+    "longitude": -47.379589
+  },
+  {
+    "rodovia": "SP 207",
+    "km": "16.18",
+    "latitude": -21.601489,
+    "longitude": -46.908495
+  },
+  {
+    "rodovia": "SP 207",
+    "km": "17.06",
+    "latitude": -21.603722,
+    "longitude": -46.916803
+  },
+  {
+    "rodovia": "SP 207",
+    "km": "18.65",
+    "latitude": -21.606096,
+    "longitude": -46.932129
+  },
+  {
+    "rodovia": "SP 207",
+    "km": "29.15",
+    "latitude": -21.58918,
+    "longitude": -47.00592
+  },
+  {
+    "rodovia": "SP 207",
+    "km": "5.94",
+    "latitude": -21.672145,
+    "longitude": -46.856878
+  },
+  {
+    "rodovia": "SP 214",
+    "km": "39.38",
+    "latitude": -23.797076,
+    "longitude": -46.815676
+  },
+  {
+    "rodovia": "SP 215",
+    "km": "150.30",
+    "latitude": -22.064234,
+    "longitude": -47.888961
+  },
+  {
+    "rodovia": "SP 215",
+    "km": "171.50",
+    "latitude": -22.061611,
+    "longitude": -48.092306
+  },
+  {
+    "rodovia": "SP 215",
+    "km": "19.24",
+    "latitude": -21.802729,
+    "longitude": -46.825901
+  },
+  {
+    "rodovia": "SP 215",
+    "km": "194.70",
+    "latitude": -22.107833,
+    "longitude": -48.306611
+  },
+  {
+    "rodovia": "SP 215",
+    "km": "20.67",
+    "latitude": -21.807892,
+    "longitude": -46.835728
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "16.94",
+    "latitude": -24.421799,
+    "longitude": -47.543732
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "22.70",
+    "latitude": -24.469542,
+    "longitude": -47.550333
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "27.53",
+    "latitude": -24.51019,
+    "longitude": -47.559544
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "35.03",
+    "latitude": -24.57545,
+    "longitude": -47.552287
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "46.12",
+    "latitude": -24.641728,
+    "longitude": -47.505209
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "52.80",
+    "latitude": -24.676112,
+    "longitude": -47.553819
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "6.76",
+    "latitude": -24.363994,
+    "longitude": -47.492961
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "71.02",
+    "latitude": -24.780711,
+    "longitude": -47.665214
+  },
+  {
+    "rodovia": "SP 222",
+    "km": "95.08",
+    "latitude": -24.73314,
+    "longitude": -47.823248
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "0.53",
+    "latitude": -22.067272,
+    "longitude": -46.982056
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "172.50",
+    "latitude": -22.2675472,
+    "longitude": -48.5017722
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "181.70",
+    "latitude": -22.2840361,
+    "longitude": -48.5755833
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "182.28",
+    "latitude": -22.2878694,
+    "longitude": -48.5776777
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "193.00",
+    "latitude": -22.3079111,
+    "longitude": -48.6663388
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "2.80",
+    "latitude": -22.055135,
+    "longitude": -47.000249
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "216.15",
+    "latitude": -22.3375666,
+    "longitude": -48.8811305
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "321.18",
+    "latitude": -22.131312,
+    "longitude": -47.651096
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "323.04",
+    "latitude": -22.88657,
+    "longitude": -49.60817
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "324.38",
+    "latitude": -22.90203,
+    "longitude": -49.61794
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "326.57",
+    "latitude": -22.93379,
+    "longitude": -49.62565
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "329.25",
+    "latitude": -22.91432,
+    "longitude": -49.62452
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "339.56",
+    "latitude": -22.95632,
+    "longitude": -49.62698
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "340.79",
+    "latitude": -23.05796,
+    "longitude": -49.62098
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "75.25",
+    "latitude": -23.0484,
+    "longitude": -49.62357
+  },
+  {
+    "rodovia": "SP 225",
+    "km": "76.66",
+    "latitude": -22.93379,
+    "longitude": -49.62565
+  },
+  {
+    "rodovia": "SP 226",
+    "km": "3.08",
+    "latitude": -24.667224,
+    "longitude": -47.90803
+  },
+  {
+    "rodovia": "SP 228",
+    "km": "29.00",
+    "latitude": -23.698383,
+    "longitude": -46.826415
+  },
+  {
+    "rodovia": "SP 228",
+    "km": "34.38",
+    "latitude": -23.714837,
+    "longitude": -46.865814
+  },
+  {
+    "rodovia": "SP 234",
+    "km": "36.70",
+    "latitude": -23.73008,
+    "longitude": -46.844841
+  },
+  {
+    "rodovia": "SP 245",
+    "km": "22.33",
+    "latitude": -23.04914,
+    "longitude": -49.14476
+  },
+  {
+    "rodovia": "SP 249",
+    "km": "176.45",
+    "latitude": -24.24984,
+    "longitude": -48.766432
+  },
+  {
+    "rodovia": "SP 249",
+    "km": "194.52",
+    "latitude": -24.100237,
+    "longitude": -48.821844
+  },
+  {
+    "rodovia": "SP 249",
+    "km": "40.65",
+    "latitude": -23.45329,
+    "longitude": -49.39733
+  },
+  {
+    "rodovia": "SP 249",
+    "km": "62.50",
+    "latitude": -23.39053,
+    "longitude": -49.55256
+  },
+  {
+    "rodovia": "SP 250",
+    "km": "245.00",
+    "latitude": -24.127088,
+    "longitude": -48.450013
+  },
+  {
+    "rodovia": "SP 250",
+    "km": "249.13",
+    "latitude": -24.149457,
+    "longitude": -48.477552
+  },
+  {
+    "rodovia": "SP 250",
+    "km": "289.90",
+    "latitude": -24.366178,
+    "longitude": -48.630331
+  },
+  {
+    "rodovia": "SP 250",
+    "km": "298.35",
+    "latitude": -24.423477,
+    "longitude": -48.673239
+  },
+  {
+    "rodovia": "SP 250",
+    "km": "306.75",
+    "latitude": -24.458246,
+    "longitude": -48.734653
+  },
+  {
+    "rodovia": "SP 250",
+    "km": "348.10",
+    "latitude": -24.610797,
+    "longitude": -48.99233
+  },
+  {
+    "rodovia": "SP 253",
+    "km": "122.00",
+    "latitude": -21.493911,
+    "longitude": -47.529628
+  },
+  {
+    "rodovia": "SP 253",
+    "km": "148.04",
+    "latitude": -21.548615,
+    "longitude": -47.694224
+  },
+  {
+    "rodovia": "SP 253",
+    "km": "155.72",
+    "latitude": -21.501478,
+    "longitude": -47.735963
+  },
+  {
+    "rodovia": "SP 253",
+    "km": "192.16",
+    "latitude": -21.371852,
+    "longitude": -48.047905
+  },
+  {
+    "rodovia": "SP 253",
+    "km": "202.00",
+    "latitude": -21.327211,
+    "longitude": -48.121806
+  },
+  {
+    "rodovia": "SP 253",
+    "km": "207.05",
+    "latitude": -21.313623,
+    "longitude": -48.167425
+  },
+  {
+    "rodovia": "SP 253",
+    "km": "216.60",
+    "latitude": -21.283983,
+    "longitude": -48.251883
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "114.00",
+    "latitude": -22.5243,
+    "longitude": -48.72078
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "124.26",
+    "latitude": -22.872453,
+    "longitude": -49.234075
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "124.86",
+    "latitude": -22.862526,
+    "longitude": -49.227454
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "144.40",
+    "latitude": -23.21978,
+    "longitude": -49.24972
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "151.20",
+    "latitude": -22.3320197,
+    "longitude": -48.7958448
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "151.60",
+    "latitude": -22.3282555,
+    "longitude": -48.7961361
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "168.00",
+    "latitude": -22.192998,
+    "longitude": -48.781261
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "175.50",
+    "latitude": -22.1453811,
+    "longitude": -48.7463499
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "178.28",
+    "latitude": -22.1285083,
+    "longitude": -48.7356527
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "182.46",
+    "latitude": -22.0925896,
+    "longitude": -48.7403991
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "53.10",
+    "latitude": -22.5181,
+    "longitude": -48.7201
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "54.50",
+    "latitude": -22.35256,
+    "longitude": -48.7539
+  },
+  {
+    "rodovia": "SP 261",
+    "km": "8.41",
+    "latitude": -22.35256,
+    "longitude": -48.7539
+  },
+  {
+    "rodovia": "SP 266",
+    "km": "439.60",
+    "latitude": -22.739213,
+    "longitude": -50.371425
+  },
+  {
+    "rodovia": "SP 266",
+    "km": "460.15",
+    "latitude": -22.841858,
+    "longitude": -50.511206
+  },
+  {
+    "rodovia": "SP 266",
+    "km": "480.55",
+    "latitude": -22.881603,
+    "longitude": -50.689843
+  },
+  {
+    "rodovia": "SP 267",
+    "km": "325.60",
+    "latitude": -23.88766,
+    "longitude": -49.139328
+  },
+  {
+    "rodovia": "SP 267",
+    "km": "326.20",
+    "latitude": -23.892103,
+    "longitude": -49.139373
+  },
+  {
+    "rodovia": "SP 268",
+    "km": "118.93",
+    "latitude": -23.501304,
+    "longitude": -47.629191
+  },
+  {
+    "rodovia": "SP 268",
+    "km": "120.50",
+    "latitude": -23.496162,
+    "longitude": -47.641964
+  },
+  {
+    "rodovia": "SP 268",
+    "km": "125.65",
+    "latitude": -23.477216,
+    "longitude": -47.686781
+  },
+  {
+    "rodovia": "SP 268",
+    "km": "127.15",
+    "latitude": -23.473522,
+    "longitude": -47.700088
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "187.10",
+    "latitude": -23.54879,
+    "longitude": -48.232117
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "197.10",
+    "latitude": -23.543805,
+    "longitude": -48.328904
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "316.28",
+    "latitude": -23.19434,
+    "longitude": -49.35078
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "329.78",
+    "latitude": -23.12231,
+    "longitude": -49.45057
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "357.05",
+    "latitude": -23.048,
+    "longitude": -49.70269
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "374.44",
+    "latitude": -22.98547,
+    "longitude": -49.85596
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "377.37",
+    "latitude": -22.96154,
+    "longitude": -49.86826
+  },
+  {
+    "rodovia": "SP 270",
+    "km": "378.20",
+    "latitude": -22.95565,
+    "longitude": -49.87321
+  },
+  {
+    "rodovia": "SP 272",
+    "km": "19.60",
+    "latitude": -22.280662,
+    "longitude": -51.699544
+  },
+  {
+    "rodovia": "SP 272",
+    "km": "47.98",
+    "latitude": -22.284543,
+    "longitude": -51.972958
+  },
+  {
+    "rodovia": "SP 274",
+    "km": "52.18",
+    "latitude": -23.540331,
+    "longitude": -47.032923
+  },
+  {
+    "rodovia": "SP 274",
+    "km": "54.80",
+    "latitude": -23.54707,
+    "longitude": -47.058667
+  },
+  {
+    "rodovia": "SP 278",
+    "km": "373.88",
+    "latitude": -22.99593,
+    "longitude": -49.85305
+  },
+  {
+    "rodovia": "SP 278",
+    "km": "375.98",
+    "latitude": -23.00273,
+    "longitude": -49.87265
+  },
+  {
+    "rodovia": "SP 280",
+    "km": "127.50",
+    "latitude": -23.2836636,
+    "longitude": -47.7929254
+  },
+  {
+    "rodovia": "SP 280",
+    "km": "97.70",
+    "latitude": -23.3502621,
+    "longitude": -47.5161688
+  },
+  {
+    "rodovia": "SP 281",
+    "km": "14.65",
+    "latitude": -23.995558,
+    "longitude": -49.322675
+  },
+  {
+    "rodovia": "SP 284",
+    "km": "475.96",
+    "latitude": -22.42764,
+    "longitude": -50.589788
+  },
+  {
+    "rodovia": "SP 284",
+    "km": "497.92",
+    "latitude": -22.2624416,
+    "longitude": -50.7037777
+  },
+  {
+    "rodovia": "SP 284",
+    "km": "498.60",
+    "latitude": -22.2945833,
+    "longitude": -50.7091388
+  },
+  {
+    "rodovia": "SP 287",
+    "km": "24.22",
+    "latitude": -23.23891,
+    "longitude": -49.42654
+  },
+  {
+    "rodovia": "SP 287",
+    "km": "31.35",
+    "latitude": -23.21142,
+    "longitude": -49.37294
+  },
+  {
+    "rodovia": "SP 287",
+    "km": "36.86",
+    "latitude": -23.17334,
+    "longitude": -49.38419
+  },
+  {
+    "rodovia": "SP 291",
+    "km": "2.02",
+    "latitude": -21.205853,
+    "longitude": -47.894635
+  },
+  {
+    "rodovia": "SP 291",
+    "km": "23.00",
+    "latitude": -21.324008,
+    "longitude": -48.047519
+  },
+  {
+    "rodovia": "SP 291",
+    "km": "4.03",
+    "latitude": -21.211229,
+    "longitude": -47.908093
+  },
+  {
+    "rodovia": "SP 293",
+    "km": "6.75",
+    "latitude": -22.4605833,
+    "longitude": -49.3378388
+  },
+  {
+    "rodovia": "SP 293",
+    "km": "7.59",
+    "latitude": -22.4556406,
+    "longitude": -49.3433126
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "439.75",
+    "latitude": -22.218825,
+    "longitude": -49.8633527
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "442.60",
+    "latitude": -22.2249914,
+    "longitude": -49.8916653
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "444.53",
+    "latitude": -22.2302583,
+    "longitude": -49.9150694
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "445.10",
+    "latitude": -22.2306971,
+    "longitude": -49.9167432
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "446.00",
+    "latitude": -22.2325861,
+    "longitude": -49.9257583
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "448.05",
+    "latitude": -22.2280472,
+    "longitude": -49.9439972
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "448.20",
+    "latitude": -22.1341802,
+    "longitude": -49.5641046
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "449.06",
+    "latitude": -22.2297746,
+    "longitude": -49.9552189
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "450.00",
+    "latitude": -22.228825,
+    "longitude": -49.9635527
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "450.70",
+    "latitude": -22.2329527,
+    "longitude": -49.9692527
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "522.50",
+    "latitude": -21.9566722,
+    "longitude": -50.4792305
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "522.80",
+    "latitude": -21.955875,
+    "longitude": -50.4835416
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "523.55",
+    "latitude": -21.9551916,
+    "longitude": -50.4875638
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "523.85",
+    "latitude": -21.9542525,
+    "longitude": -50.4924732
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "524.50",
+    "latitude": -21.9542525,
+    "longitude": -50.4924732
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "528.40",
+    "latitude": -21.9379274,
+    "longitude": -50.5302885
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "543.00",
+    "latitude": -21.8815857,
+    "longitude": -50.6534381
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "596.35",
+    "latitude": -21.6495888,
+    "longitude": -51.0871
+  },
+  {
+    "rodovia": "SP 294",
+    "km": "670.80",
+    "latitude": -21.36082108,
+    "longitude": -51.71437987
+  },
+  {
+    "rodovia": "SP 300",
+    "km": "96.75",
+    "latitude": -23.2491729,
+    "longitude": -47.2232444
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "121.27",
+    "latitude": -22.754858,
+    "longitude": -47.264149
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "126.40",
+    "latitude": -22.756693,
+    "longitude": -47.310343
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "127.42",
+    "latitude": -22.759122,
+    "longitude": -47.319678
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "128.09",
+    "latitude": -22.760004,
+    "longitude": -47.326374
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "131.10",
+    "latitude": -22.76208,
+    "longitude": -47.356742
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "133.35",
+    "latitude": -22.763667,
+    "longitude": -47.378361
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "134.34",
+    "latitude": -22.763667,
+    "longitude": -47.378361
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "137.54",
+    "latitude": -22.766345,
+    "longitude": -47.41832
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "143.51",
+    "latitude": -22.757362,
+    "longitude": -47.473426
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "150.20",
+    "latitude": -22.733754,
+    "longitude": -47.53681
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "152.70",
+    "latitude": -22.726495,
+    "longitude": -47.559491
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "167.50",
+    "latitude": -22.689228,
+    "longitude": -47.667617
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "168.05",
+    "latitude": -22.686279,
+    "longitude": -47.671707
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "173.93",
+    "latitude": -22.6768034,
+    "longitude": -47.7281024
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "199.00",
+    "latitude": -22.5662166,
+    "longitude": -47.9110416
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "234.40",
+    "latitude": -22.5176638,
+    "longitude": -48.202075
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "303.05",
+    "latitude": -22.25605,
+    "longitude": -48.55742
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "313.10",
+    "latitude": -22.1936,
+    "longitude": -48.62403
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "321.93",
+    "latitude": -22.13057,
+    "longitude": -48.67573
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "330.70",
+    "latitude": -22.06843,
+    "longitude": -48.72763
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "341.67",
+    "latitude": -21.98256,
+    "longitude": -48.78004
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "341.94",
+    "latitude": -21.98004,
+    "longitude": -48.7812
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "351.92",
+    "latitude": -21.89555,
+    "longitude": -48.81356
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "365.40",
+    "latitude": -21.780786,
+    "longitude": -48.846915
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "368.30",
+    "latitude": -21.766682,
+    "longitude": -48.868616
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "381.00",
+    "latitude": -21.712695,
+    "longitude": -48.978867
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "417.33",
+    "latitude": -21.480357,
+    "longitude": -49.228295
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "417.78",
+    "latitude": -21.477429,
+    "longitude": -49.231193
+  },
+  {
+    "rodovia": "SP 304",
+    "km": "480.04",
+    "latitude": -21.106914,
+    "longitude": -49.669081
+  },
+  {
+    "rodovia": "SP 305",
+    "km": "12.70",
+    "latitude": -21.262337,
+    "longitude": -48.467477
+  },
+  {
+    "rodovia": "SP 306",
+    "km": "15.95",
+    "latitude": -22.798267,
+    "longitude": -47.437739
+  },
+  {
+    "rodovia": "SP 306",
+    "km": "19.23",
+    "latitude": -22.77029,
+    "longitude": -47.421996
+  },
+  {
+    "rodovia": "SP 306",
+    "km": "19.25",
+    "latitude": -22.77259,
+    "longitude": -47.423129
+  },
+  {
+    "rodovia": "SP 306",
+    "km": "23.11",
+    "latitude": -22.757087,
+    "longitude": -47.431162
+  },
+  {
+    "rodovia": "SP 306",
+    "km": "31.60",
+    "latitude": -22.704623,
+    "longitude": -47.454904
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "165.40",
+    "latitude": -22.4676944,
+    "longitude": -47.5114722
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "194.00",
+    "latitude": -22.2813665,
+    "longitude": -47.6820403
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "240.40",
+    "latitude": -21.975674,
+    "longitude": -47.93411
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "259.35",
+    "latitude": -21.8835596,
+    "longitude": -48.0854385
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "260.70",
+    "latitude": -21.8764219,
+    "longitude": -48.095181
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "271.55",
+    "latitude": -21.8190013,
+    "longitude": -48.1775114
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "275.13",
+    "latitude": -21.7992623,
+    "longitude": -48.2052322
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "319.90",
+    "latitude": -21.526372,
+    "longitude": -48.525039
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "375.97",
+    "latitude": -21.117464,
+    "longitude": -49.041272
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "390.29",
+    "latitude": -21.202553,
+    "longitude": -48.937964
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "394.46",
+    "latitude": -21.0931952,
+    "longitude": -49.0729195
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "412.00",
+    "latitude": -20.992911,
+    "longitude": -49.202714
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "424.27",
+    "latitude": -20.9146618,
+    "longitude": -49.28666
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "426.76",
+    "latitude": -20.897318,
+    "longitude": -49.302089
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "426.85",
+    "latitude": -20.897197,
+    "longitude": -49.302517
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "434.60",
+    "latitude": -20.8432009,
+    "longitude": -49.3504631
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "438.16",
+    "latitude": -20.8234807,
+    "longitude": -49.376119
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "455.80",
+    "latitude": -20.802763,
+    "longitude": -49.546792
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "472.00",
+    "latitude": -20.761775,
+    "longitude": -49.694992
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "510.03",
+    "latitude": -20.695699,
+    "longitude": -50.047754
+  },
+  {
+    "rodovia": "SP 310",
+    "km": "629.10",
+    "latitude": -20.5777,
+    "longitude": -51.131599
+  },
+  {
+    "rodovia": "SP 312",
+    "km": "34.40",
+    "latitude": -23.481805,
+    "longitude": -46.887867
+  },
+  {
+    "rodovia": "SP 312",
+    "km": "34.86",
+    "latitude": -23.478777,
+    "longitude": -46.889581
+  },
+  {
+    "rodovia": "SP 312",
+    "km": "39.40",
+    "latitude": -23.453259,
+    "longitude": -46.914888
+  },
+  {
+    "rodovia": "SP 312",
+    "km": "46.66",
+    "latitude": -23.413214,
+    "longitude": -46.950475
+  },
+  {
+    "rodovia": "SP 312",
+    "km": "49.63",
+    "latitude": -23.40968,
+    "longitude": -46.971326
+  },
+  {
+    "rodovia": "SP 312",
+    "km": "79.85",
+    "latitude": -23.299292,
+    "longitude": -47.146027
+  },
+  {
+    "rodovia": "SP 315",
+    "km": "19.90",
+    "latitude": -22.428892,
+    "longitude": -49.514731
+  },
+  {
+    "rodovia": "SP 316",
+    "km": "170.50",
+    "latitude": -22.454334,
+    "longitude": -47.522838
+  },
+  {
+    "rodovia": "SP 316",
+    "km": "172.30",
+    "latitude": -22.448702,
+    "longitude": -47.537414
+  },
+  {
+    "rodovia": "SP 317",
+    "km": "16.00",
+    "latitude": -21.632111,
+    "longitude": -48.832333
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "462.45",
+    "latitude": -20.739202,
+    "longitude": -49.572439
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "477.09",
+    "latitude": -20.63127,
+    "longitude": -49.657249
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "479.08",
+    "latitude": -20.616365,
+    "longitude": -49.668198
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "479.32",
+    "latitude": -20.614543,
+    "longitude": -49.669098
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "498.70",
+    "latitude": -20.490405,
+    "longitude": -49.793971
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "516.41",
+    "latitude": -20.421998,
+    "longitude": -49.948817
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "522.45",
+    "latitude": -20.399063,
+    "longitude": -49.995145
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "551.89",
+    "latitude": -20.272807,
+    "longitude": -50.2451
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "556.89",
+    "latitude": -20.271522,
+    "longitude": -50.291002
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "578.08",
+    "latitude": -20.272565,
+    "longitude": -50.492024
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "582.03",
+    "latitude": -20.264933,
+    "longitude": -50.529391
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "624.01",
+    "latitude": -20.1921,
+    "longitude": -50.9202
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "625.40",
+    "latitude": -20.18891,
+    "longitude": -50.932378
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "626.36",
+    "latitude": -20.187107,
+    "longitude": -50.9403
+  },
+  {
+    "rodovia": "SP 320",
+    "km": "628.11",
+    "latitude": -20.170969,
+    "longitude": -50.949837
+  },
+  {
+    "rodovia": "SP 321",
+    "km": "345.20",
+    "latitude": -22.289258,
+    "longitude": -49.070489
+  },
+  {
+    "rodovia": "SP 321",
+    "km": "355.20",
+    "latitude": -22.20595,
+    "longitude": -49.04051
+  },
+  {
+    "rodovia": "SP 321",
+    "km": "370.00",
+    "latitude": -22.07349,
+    "longitude": -49.02407
+  },
+  {
+    "rodovia": "SP 321",
+    "km": "374.40",
+    "latitude": -22.03403,
+    "longitude": -49.01941
+  },
+  {
+    "rodovia": "SP 321",
+    "km": "390.05",
+    "latitude": -21.89447,
+    "longitude": -49.02959
+  },
+  {
+    "rodovia": "SP 321",
+    "km": "473.80",
+    "latitude": -21.309504,
+    "longitude": -49.045219
+  },
+  {
+    "rodovia": "SP 322",
+    "km": "399.13",
+    "latitude": -20.920649,
+    "longitude": -48.538729
+  },
+  {
+    "rodovia": "SP 322",
+    "km": "412.00",
+    "latitude": -20.890158,
+    "longitude": -48.64135
+  },
+  {
+    "rodovia": "SP 322",
+    "km": "431.01",
+    "latitude": -20.805876,
+    "longitude": -48.800953
+  },
+  {
+    "rodovia": "SP 322",
+    "km": "442.37",
+    "latitude": -20.883781,
+    "longitude": -48.665605
+  },
+  {
+    "rodovia": "SP 322",
+    "km": "461.80",
+    "latitude": -20.583997,
+    "longitude": -48.962612
+  },
+  {
+    "rodovia": "SP 322",
+    "km": "484.71",
+    "latitude": -20.425383,
+    "longitude": -49.108134
+  },
+  {
+    "rodovia": "SP 322",
+    "km": "601.05",
+    "latitude": -20.1024,
+    "longitude": -49.9084
+  },
+  {
+    "rodovia": "SP 324",
+    "km": "84.48",
+    "latitude": -23.05062,
+    "longitude": -47.07732
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "302.53",
+    "latitude": -21.6025435,
+    "longitude": -48.3349746
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "328.00",
+    "latitude": -21.375408,
+    "longitude": -48.323956
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "343.76",
+    "latitude": -23.711375,
+    "longitude": -49.474797
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "343.96",
+    "latitude": -21.237769,
+    "longitude": -48.354017
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "351.90",
+    "latitude": -21.168825,
+    "longitude": -48.3761
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "363.50",
+    "latitude": -21.0686938,
+    "longitude": -48.4084059
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "369.34",
+    "latitude": -21.018123,
+    "longitude": -48.424681
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "452.39",
+    "latitude": -20.303377,
+    "longitude": -48.665559
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "458.54",
+    "latitude": -20.250056,
+    "longitude": -48.677017
+  },
+  {
+    "rodovia": "SP 326",
+    "km": "468.17",
+    "latitude": -20.166665,
+    "longitude": -48.690262
+  },
+  {
+    "rodovia": "SP 331",
+    "km": "113.25",
+    "latitude": -21.89475,
+    "longitude": -49.21414
+  },
+  {
+    "rodovia": "SP 331",
+    "km": "115.30",
+    "latitude": -21.88832,
+    "longitude": -49.23291
+  },
+  {
+    "rodovia": "SP 331",
+    "km": "15.80",
+    "latitude": -21.739704,
+    "longitude": -48.447787
+  },
+  {
+    "rodovia": "SP 331",
+    "km": "5.20",
+    "latitude": -21.730478,
+    "longitude": -48.346442
+  },
+  {
+    "rodovia": "SP 331",
+    "km": "56.00",
+    "latitude": -21.789595,
+    "longitude": -48.831555
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "270.10",
+    "latitude": -21.73046,
+    "longitude": -47.280427
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "29.55",
+    "latitude": -23.391352,
+    "longitude": -46.728493
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "30.71",
+    "latitude": -23.385267,
+    "longitude": -46.73281
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "33.00",
+    "latitude": -23.37368,
+    "longitude": -46.749402
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "38.25",
+    "latitude": -23.334211,
+    "longitude": -46.74656
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "39.15",
+    "latitude": -23.328064,
+    "longitude": -46.751022
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "40.12",
+    "latitude": -23.319827,
+    "longitude": -46.753624
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "40.50",
+    "latitude": -23.316438,
+    "longitude": -46.754278
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "46.31",
+    "latitude": -23.292105,
+    "longitude": -46.788015
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "50.80",
+    "latitude": -23.266741,
+    "longitude": -46.815521
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "71.10",
+    "latitude": -23.133893,
+    "longitude": -46.922269
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "74.16",
+    "latitude": -23.1114,
+    "longitude": -46.9421
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "81.00",
+    "latitude": -23.059753,
+    "longitude": -46.950477
+  },
+  {
+    "rodovia": "SP 332",
+    "km": "91.80",
+    "latitude": -23.006965,
+    "longitude": -47.001888
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "104.54",
+    "latitude": -21.205306,
+    "longitude": -48.184064
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "110.48",
+    "latitude": -21.2291572,
+    "longitude": -48.2333277
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "110.66",
+    "latitude": -21.2297282,
+    "longitude": -48.2345339
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "118.24",
+    "latitude": -21.269206,
+    "longitude": -48.293958
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "118.80",
+    "latitude": -21.271778,
+    "longitude": -48.297872
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "122.65",
+    "latitude": -21.285467,
+    "longitude": -48.332483
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "145.20",
+    "latitude": -21.420156,
+    "longitude": -48.493183
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "145.55",
+    "latitude": -21.422067,
+    "longitude": -48.495844
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "147.80",
+    "latitude": -21.432378,
+    "longitude": -48.515619
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "148.10",
+    "latitude": -21.4329663,
+    "longitude": -48.5166846
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "150.30",
+    "latitude": -21.442981,
+    "longitude": -48.535972
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "150.52",
+    "latitude": -21.444071,
+    "longitude": -48.537753
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "168.17",
+    "latitude": -21.5213371,
+    "longitude": -48.6861906
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "168.71",
+    "latitude": -21.523824,
+    "longitude": -48.690843
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "173.32",
+    "latitude": -21.533377,
+    "longitude": -48.734562
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "173.65",
+    "latitude": -21.534101,
+    "longitude": -48.737653
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "178.85",
+    "latitude": -21.5436,
+    "longitude": -48.7871
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "179.12",
+    "latitude": -21.5438,
+    "longitude": -48.7891
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "179.81",
+    "latitude": -21.5448696,
+    "longitude": -48.7948703
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "180.25",
+    "latitude": -21.5458238,
+    "longitude": -48.799912
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "45.03",
+    "latitude": -21.207132,
+    "longitude": -47.661578
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "6.00",
+    "latitude": -21.284183,
+    "longitude": -47.34615
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "85.86",
+    "latitude": -21.1674317,
+    "longitude": -48.0161759
+  },
+  {
+    "rodovia": "SP 333",
+    "km": "88.80",
+    "latitude": -21.171028,
+    "longitude": -48.045644
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "406.93",
+    "latitude": -20.463368,
+    "longitude": -47.415058
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "407.02",
+    "latitude": -20.462592,
+    "longitude": -47.41512
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "410.00",
+    "latitude": -20.437003,
+    "longitude": -47.421734
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "418.15",
+    "latitude": -20.380757,
+    "longitude": -47.44465
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "427.31",
+    "latitude": -20.310712,
+    "longitude": -47.41397
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "442.17",
+    "latitude": -20.220904,
+    "longitude": -47.468475
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "449.90",
+    "latitude": -20.171802,
+    "longitude": -47.464523
+  },
+  {
+    "rodovia": "SP 334",
+    "km": "457.07",
+    "latitude": -20.121482,
+    "longitude": -47.466757
+  },
+  {
+    "rodovia": "SP 338",
+    "km": "293.25",
+    "latitude": -21.389649,
+    "longitude": -47.221255
+  },
+  {
+    "rodovia": "SP 338",
+    "km": "300.57",
+    "latitude": -21.335678,
+    "longitude": -47.257745
+  },
+  {
+    "rodovia": "SP 344",
+    "km": "243.10",
+    "latitude": -21.842888,
+    "longitude": -46.883645
+  },
+  {
+    "rodovia": "SP 344",
+    "km": "244.96",
+    "latitude": -21.825608,
+    "longitude": -46.877352
+  },
+  {
+    "rodovia": "SP 344",
+    "km": "277.00",
+    "latitude": -21.659969,
+    "longitude": -46.725856
+  },
+  {
+    "rodovia": "SP 345",
+    "km": "123.56",
+    "latitude": -20.445785,
+    "longitude": -48.219607
+  },
+  {
+    "rodovia": "SP 345",
+    "km": "58.00",
+    "latitude": -20.56167,
+    "longitude": -47.61539
+  },
+  {
+    "rodovia": "SP 345",
+    "km": "7.03",
+    "latitude": -20.621175,
+    "longitude": -47.17737
+  },
+  {
+    "rodovia": "SP 345",
+    "km": "99.26",
+    "latitude": -20.49206,
+    "longitude": -47.991591
+  },
+  {
+    "rodovia": "SP 346",
+    "km": "204.85",
+    "latitude": -22.164789,
+    "longitude": -46.736683
+  },
+  {
+    "rodovia": "SP 346",
+    "km": "212.00",
+    "latitude": -22.122853,
+    "longitude": -46.685256
+  },
+  {
+    "rodovia": "SP 346",
+    "km": "212.25",
+    "latitude": -22.121747,
+    "longitude": -46.683941
+  },
+  {
+    "rodovia": "SP 349",
+    "km": "9.87",
+    "latitude": -22.234401,
+    "longitude": -49.644299
+  },
+  {
+    "rodovia": "SP 351",
+    "km": "101.50",
+    "latitude": -20.725459,
+    "longitude": -48.027524
+  },
+  {
+    "rodovia": "SP 351",
+    "km": "11.00",
+    "latitude": -21.025321,
+    "longitude": -47.256739
+  },
+  {
+    "rodovia": "SP 351",
+    "km": "15.20",
+    "latitude": -21.029338,
+    "longitude": -47.298837
+  },
+  {
+    "rodovia": "SP 351",
+    "km": "50.00",
+    "latitude": -20.909261,
+    "longitude": -47.593168
+  },
+  {
+    "rodovia": "SP 351",
+    "km": "54.97",
+    "latitude": -20.894985,
+    "longitude": -47.636872
+  },
+  {
+    "rodovia": "SP 351",
+    "km": "79.20",
+    "latitude": -20.762547,
+    "longitude": -47.820592
+  },
+  {
+    "rodovia": "SP 352",
+    "km": "135.17",
+    "latitude": -22.678971,
+    "longitude": -46.778021
+  },
+  {
+    "rodovia": "SP 354",
+    "km": "43.25",
+    "latitude": -23.312602,
+    "longitude": -46.817793
+  },
+  {
+    "rodovia": "SP 354",
+    "km": "49.23",
+    "latitude": -23.265697,
+    "longitude": -46.797535
+  },
+  {
+    "rodovia": "SP 354",
+    "km": "51.66",
+    "latitude": -23.248484,
+    "longitude": -46.790209
+  },
+  {
+    "rodovia": "SP 354",
+    "km": "58.07",
+    "latitude": -23.199457,
+    "longitude": -46.796708
+  },
+  {
+    "rodovia": "SP 354",
+    "km": "61.30",
+    "latitude": -23.175203,
+    "longitude": -46.774157
+  },
+  {
+    "rodovia": "SP 354",
+    "km": "67.30",
+    "latitude": -23.13819,
+    "longitude": -46.741095
+  },
+  {
+    "rodovia": "SP 354",
+    "km": "75.48",
+    "latitude": -23.0799232,
+    "longitude": -46.701567
+  },
+  {
+    "rodovia": "SP 360",
+    "km": "106.25",
+    "latitude": -22.8645,
+    "longitude": -46.789802
+  },
+  {
+    "rodovia": "SP 360",
+    "km": "118.20",
+    "latitude": -22.780949,
+    "longitude": -46.757888
+  },
+  {
+    "rodovia": "SP 360",
+    "km": "137.50",
+    "latitude": -22.680923,
+    "longitude": -46.741562
+  },
+  {
+    "rodovia": "SP 360",
+    "km": "144.79",
+    "latitude": -22.640554,
+    "longitude": -46.730037
+  },
+  {
+    "rodovia": "SP 360",
+    "km": "157.50",
+    "latitude": -22.571303,
+    "longitude": -46.668747
+  },
+  {
+    "rodovia": "SP 360",
+    "km": "176.10",
+    "latitude": -22.458905,
+    "longitude": -46.590618
+  },
+  {
+    "rodovia": "SP 360",
+    "km": "90.40",
+    "latitude": -22.973987,
+    "longitude": -46.82704
+  },
+  {
+    "rodovia": "SP 373",
+    "km": "104.51",
+    "latitude": -20.715581,
+    "longitude": -48.054936
+  },
+  {
+    "rodovia": "SP 373",
+    "km": "151.50",
+    "latitude": -20.704794,
+    "longitude": -48.518253
+  },
+  {
+    "rodovia": "SP 373",
+    "km": "171.18",
+    "latitude": -20.732962,
+    "longitude": -48.648525
+  },
+  {
+    "rodovia": "SP 375",
+    "km": "16.93",
+    "latitude": -22.79189,
+    "longitude": -50.20767
+  },
+  {
+    "rodovia": "SP 375",
+    "km": "3.86",
+    "latitude": -22.902436,
+    "longitude": -50.255833
+  },
+  {
+    "rodovia": "SP 377",
+    "km": "2.64",
+    "latitude": -20.736728,
+    "longitude": -49.698997
+  },
+  {
+    "rodovia": "SP 379",
+    "km": "10.46",
+    "latitude": -21.072002,
+    "longitude": -49.24994
+  },
+  {
+    "rodovia": "SP 381",
+    "km": "1.00",
+    "latitude": -21.647064,
+    "longitude": -49.735952
+  },
+  {
+    "rodovia": "SP 381",
+    "km": "16.55",
+    "latitude": -21.535019,
+    "longitude": -49.667011
+  },
+  {
+    "rodovia": "SP 385",
+    "km": "27.42",
+    "latitude": -20.184936,
+    "longitude": -47.995805
+  },
+  {
+    "rodovia": "SP 413",
+    "km": "0.65",
+    "latitude": -20.239539,
+    "longitude": -48.122842
+  },
+  {
+    "rodovia": "SP 413",
+    "km": "25.44",
+    "latitude": -20.040685,
+    "longitude": -48.234169
+  },
+  {
+    "rodovia": "SP 421",
+    "km": "132.15",
+    "latitude": -22.615858,
+    "longitude": -51.240125
+  },
+  {
+    "rodovia": "SP 421",
+    "km": "15.65",
+    "latitude": -22.32157,
+    "longitude": -50.28265
+  },
+  {
+    "rodovia": "SP 421",
+    "km": "51.40",
+    "latitude": -22.39882,
+    "longitude": -50.60123
+  },
+  {
+    "rodovia": "SP 421",
+    "km": "91.97",
+    "latitude": -22.604303,
+    "longitude": -50.871024
+  },
+  {
+    "rodovia": "SP 423",
+    "km": "17.99",
+    "latitude": -20.392214,
+    "longitude": -49.443245
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "118.70",
+    "latitude": -20.615734,
+    "longitude": -48.76002
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "123.11",
+    "latitude": -20.630221,
+    "longitude": -48.800095
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "139.69",
+    "latitude": -20.701674,
+    "longitude": -48.94141
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "145.56",
+    "latitude": -20.715961,
+    "longitude": -48.997333
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "149.37",
+    "latitude": -20.723701,
+    "longitude": -49.026352
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "157.00",
+    "latitude": -20.741496,
+    "longitude": -49.098912
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "160.95",
+    "latitude": -20.751353,
+    "longitude": -49.138683
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "169.50",
+    "latitude": -20.770482,
+    "longitude": -49.21519
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "183.81",
+    "latitude": -20.801833,
+    "longitude": -49.349801
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "227.52",
+    "latitude": -21.039371,
+    "longitude": -49.694464
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "227.97",
+    "latitude": -21.041427,
+    "longitude": -49.698256
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "239.65",
+    "latitude": -21.096237,
+    "longitude": -49.795246
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "338.21",
+    "latitude": -21.642146,
+    "longitude": -50.499989
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "362.40",
+    "latitude": -21.711432,
+    "longitude": -50.721336
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "455.74",
+    "latitude": -22.159658,
+    "longitude": -51.394807
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "481.21",
+    "latitude": -22.307903,
+    "longitude": -51.539479
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "489.29",
+    "latitude": -22.364025,
+    "longitude": -51.579421
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "499.80",
+    "latitude": -22.437443,
+    "longitude": -51.64802
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "59.94",
+    "latitude": -20.335019,
+    "longitude": -48.300041
+  },
+  {
+    "rodovia": "SP 425",
+    "km": "79.72",
+    "latitude": -20.447905,
+    "longitude": -48.451476
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "100.85",
+    "latitude": -21.895678,
+    "longitude": -50.704325
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "43.98",
+    "latitude": -22.347281,
+    "longitude": -50.961351
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "45.83",
+    "latitude": -22.331522,
+    "longitude": -50.955381
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "58.21",
+    "latitude": -22.226006,
+    "longitude": -50.915515
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "59.90",
+    "latitude": -22.21172,
+    "longitude": -50.910169
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "67.02",
+    "latitude": -22.157301,
+    "longitude": -50.874709
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "93.24",
+    "latitude": -21.959822,
+    "longitude": -50.738525
+  },
+  {
+    "rodovia": "SP 457",
+    "km": "96.88",
+    "latitude": -21.929671,
+    "longitude": -50.717884
+  },
+  {
+    "rodovia": "SP 461",
+    "km": "125.78",
+    "latitude": -20.414773,
+    "longitude": -49.994771
+  },
+  {
+    "rodovia": "SP 461",
+    "km": "16.02",
+    "latitude": -21.299641,
+    "longitude": -50.367576
+  },
+  {
+    "rodovia": "SP 461",
+    "km": "162.50",
+    "latitude": -20.092793,
+    "longitude": -49.924222
+  },
+  {
+    "rodovia": "SP 463",
+    "km": "144.66",
+    "latitude": -20.304811,
+    "longitude": -50.503767
+  },
+  {
+    "rodovia": "SP 463",
+    "km": "44.05",
+    "latitude": -21.191701,
+    "longitude": -50.469651
+  },
+  {
+    "rodovia": "SP 463",
+    "km": "46.27",
+    "latitude": -21.171778,
+    "longitude": -50.465725
+  },
+  {
+    "rodovia": "SP 479",
+    "km": "24.58",
+    "latitude": -20.307444,
+    "longitude": -49.731255
+  },
+  {
+    "rodovia": "SP 483",
+    "km": "10.85",
+    "latitude": -22.380926,
+    "longitude": -51.299976
+  },
+  {
+    "rodovia": "SP 483",
+    "km": "8.30",
+    "latitude": -22.363803,
+    "longitude": -51.292724
+  },
+  {
+    "rodovia": "SP 501",
+    "km": "10.79",
+    "latitude": -22.098795,
+    "longitude": -51.459574
+  },
+  {
+    "rodovia": "SP 501",
+    "km": "11.11",
+    "latitude": -22.097425,
+    "longitude": -51.458856
+  },
+  {
+    "rodovia": "SP 501",
+    "km": "16.30",
+    "latitude": -22.055201,
+    "longitude": -51.432559
+  },
+  {
+    "rodovia": "SP 501",
+    "km": "25.93",
+    "latitude": -21.984563,
+    "longitude": -51.38686
+  },
+  {
+    "rodovia": "SP 501",
+    "km": "3.17",
+    "latitude": -22.161252,
+    "longitude": -51.435779
+  },
+  {
+    "rodovia": "SP 501",
+    "km": "44.19",
+    "latitude": -21.859994,
+    "longitude": -51.410151
+  },
+  {
+    "rodovia": "SP 543",
+    "km": "554.07",
+    "latitude": -20.271319,
+    "longitude": -50.264394
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "110.48",
+    "latitude": -21.623934,
+    "longitude": -51.712711
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "112.63",
+    "latitude": -21.60739,
+    "longitude": -51.704544
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "132.05",
+    "latitude": -21.452159,
+    "longitude": -51.620735
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "144.76",
+    "latitude": -21.35178,
+    "longitude": -51.56759
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "159.49",
+    "latitude": -21.231994,
+    "longitude": -51.502293
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "161.48",
+    "latitude": -21.215228,
+    "longitude": -51.493278
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "172.20",
+    "latitude": -21.123539,
+    "longitude": -51.463289
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "24.30",
+    "latitude": -22.318217,
+    "longitude": -52.063453
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "4.30",
+    "latitude": -22.485552,
+    "longitude": -52.138216
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "47.50",
+    "latitude": -22.148591,
+    "longitude": -51.934125
+  },
+  {
+    "rodovia": "SP 563",
+    "km": "78.28",
+    "latitude": -21.889615,
+    "longitude": -51.830616
+  },
+  {
+    "rodovia": "SP 595",
+    "km": "110.43",
+    "latitude": -20.212759,
+    "longitude": -50.904539
+  },
+  {
+    "rodovia": "SP 595",
+    "km": "21.77",
+    "latitude": -20.649192,
+    "longitude": -51.444954
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "10.30",
+    "latitude": -22.536281,
+    "longitude": -52.269573
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "12.70",
+    "latitude": -22.527536,
+    "longitude": -52.291497
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "16.30",
+    "latitude": -22.517436,
+    "longitude": -52.32728
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "18.24",
+    "latitude": -22.515457,
+    "longitude": -52.340712
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "31.00",
+    "latitude": -22.502938,
+    "longitude": -52.466161
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "33.00",
+    "latitude": -22.500912,
+    "longitude": -52.48982
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "46.66",
+    "latitude": -22.485518,
+    "longitude": -52.615802
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "6.50",
+    "latitude": -22.550277,
+    "longitude": -52.235694
+  },
+  {
+    "rodovia": "SP 613",
+    "km": "7.90",
+    "latitude": -22.54495,
+    "longitude": -52.248583
+  },
+  {
+    "rodovia": "SPA 009/010",
+    "km": "8.41",
+    "latitude": -22.934,
+    "longitude": -46.511099
+  },
+  {
+    "rodovia": "SPA 017/123",
+    "km": "1.71",
+    "latitude": -22.943286,
+    "longitude": -45.57905
+  },
+  {
+    "rodovia": "SPA 018/461",
+    "km": "8.50",
+    "latitude": -21.235675,
+    "longitude": -50.409198
+  },
+  {
+    "rodovia": "SPA 021/060",
+    "km": "7.57",
+    "latitude": -22.566398,
+    "longitude": -44.940573
+  },
+  {
+    "rodovia": "SPA 040/079",
+    "km": "2.08",
+    "latitude": -23.24403,
+    "longitude": -47.30694
+  },
+  {
+    "rodovia": "SPA 040/079",
+    "km": "2.12",
+    "latitude": -23.239444,
+    "longitude": -47.306236
+  },
+  {
+    "rodovia": "SPA 044/225",
+    "km": "0.90",
+    "latitude": -22.010374,
+    "longitude": -47.407628
+  },
+  {
+    "rodovia": "SPA 052/031",
+    "km": "10.51",
+    "latitude": -23.638222,
+    "longitude": -46.393309
+  },
+  {
+    "rodovia": "SPA 052/031",
+    "km": "6.89",
+    "latitude": -23.658006,
+    "longitude": -46.374814
+  },
+  {
+    "rodovia": "SPA 053/332",
+    "km": "1.50",
+    "latitude": -23.242355,
+    "longitude": -46.827718
+  },
+  {
+    "rodovia": "SPA 060/056",
+    "km": "3.09",
+    "latitude": -23.348558,
+    "longitude": -46.201135
+  },
+  {
+    "rodovia": "SPA 066/300",
+    "km": "1.00",
+    "latitude": -23.177903,
+    "longitude": -46.978145
+  },
+  {
+    "rodovia": "SPA 066/300",
+    "km": "3.00",
+    "latitude": -23.172299,
+    "longitude": -46.994459
+  },
+  {
+    "rodovia": "SPA 066/300",
+    "km": "5.48",
+    "latitude": -23.162577,
+    "longitude": -47.017285
+  },
+  {
+    "rodovia": "SPA 066/300",
+    "km": "8.44",
+    "latitude": -23.155803,
+    "longitude": -47.044983
+  },
+  {
+    "rodovia": "SPA 074/613",
+    "km": "5.00",
+    "latitude": -22.547861,
+    "longitude": -52.860776
+  },
+  {
+    "rodovia": "SPA 075/330",
+    "km": "1.58",
+    "latitude": -23.046601,
+    "longitude": -46.985013
+  },
+  {
+    "rodovia": "SPA 079/613",
+    "km": "2.27",
+    "latitude": -22.517447,
+    "longitude": -52.945687
+  },
+  {
+    "rodovia": "SPA 079/613",
+    "km": "6.32",
+    "latitude": -22.484764,
+    "longitude": -52.955981
+  },
+  {
+    "rodovia": "SPA 082/330",
+    "km": "1.65",
+    "latitude": -23.003163,
+    "longitude": -47.010896
+  },
+  {
+    "rodovia": "SPA 085/060",
+    "km": "0.96",
+    "latitude": -22.913594,
+    "longitude": -45.348244
+  },
+  {
+    "rodovia": "SPA 092/060",
+    "km": "2.27",
+    "latitude": -22.94118,
+    "longitude": -45.422384
+  },
+  {
+    "rodovia": "SPA 092/060",
+    "km": "3.10",
+    "latitude": -22.938257,
+    "longitude": -45.429586
+  },
+  {
+    "rodovia": "SPA 092/060",
+    "km": "4.02",
+    "latitude": -22.935131,
+    "longitude": -45.437657
+  },
+  {
+    "rodovia": "SPA 099/060",
+    "km": "1.50",
+    "latitude": -22.967648,
+    "longitude": -45.461934
+  },
+  {
+    "rodovia": "SPA 099/060",
+    "km": "1.92",
+    "latitude": -22.96352,
+    "longitude": -45.461947
+  },
+  {
+    "rodovia": "SPA 099/139",
+    "km": "0.30",
+    "latitude": -23.886544,
+    "longitude": -48.011334
+  },
+  {
+    "rodovia": "SPA 103/079",
+    "km": "5.80",
+    "latitude": -23.563119,
+    "longitude": -47.449061
+  },
+  {
+    "rodovia": "SPA 109/008",
+    "km": "2.95",
+    "latitude": -22.804325,
+    "longitude": -46.523905
+  },
+  {
+    "rodovia": "SPA 110/330",
+    "km": "1.83",
+    "latitude": -22.808975,
+    "longitude": -47.186469
+  },
+  {
+    "rodovia": "SPA 115/330",
+    "km": "1.58",
+    "latitude": -22.799372,
+    "longitude": -47.235738
+  },
+  {
+    "rodovia": "SPA 115/330",
+    "km": "2.50",
+    "latitude": -22.804782,
+    "longitude": -47.243915
+  },
+  {
+    "rodovia": "SPA 127/304",
+    "km": "2.35",
+    "latitude": -22.768822,
+    "longitude": -47.302847
+  },
+  {
+    "rodovia": "SPA 135/065",
+    "km": "0.66",
+    "latitude": -22.849298,
+    "longitude": -47.042026
+  },
+  {
+    "rodovia": "SPA 135/065",
+    "km": "2.60",
+    "latitude": -22.868088,
+    "longitude": -47.044359
+  },
+  {
+    "rodovia": "SPA 149/215",
+    "km": "3.90",
+    "latitude": -22.096613,
+    "longitude": -47.878291
+  },
+  {
+    "rodovia": "SPA 175/387",
+    "km": "3.77",
+    "latitude": -21.655411,
+    "longitude": -49.761011
+  },
+  {
+    "rodovia": "SPA 216/280",
+    "km": "3.71",
+    "latitude": -23.08245,
+    "longitude": -48.60647
+  },
+  {
+    "rodovia": "SPA 228/225",
+    "km": "1.35",
+    "latitude": -22.3099955,
+    "longitude": -49.0005488
+  },
+  {
+    "rodovia": "SPA 228/225",
+    "km": "2.60",
+    "latitude": -22.3083769,
+    "longitude": -49.0118632
+  },
+  {
+    "rodovia": "SPA 228/225",
+    "km": "3.30",
+    "latitude": -22.3098925,
+    "longitude": -49.018381
+  },
+  {
+    "rodovia": "SPA 301/310",
+    "km": "2.00",
+    "latitude": -21.627685,
+    "longitude": -48.383196
+  },
+  {
+    "rodovia": "SPA 354/294",
+    "km": "3.00",
+    "latitude": -22.327644,
+    "longitude": -49.113339
+  },
+  {
+    "rodovia": "SPA 372/321",
+    "km": "4.00",
+    "latitude": -22.05325,
+    "longitude": -48.98363
+  },
+  {
+    "rodovia": "SPA 459/230",
+    "km": "3.12",
+    "latitude": -24.626521,
+    "longitude": -47.880274
+  },
+  {
+    "rodovia": "SPA 473/310",
+    "km": "3.30",
+    "latitude": -20.776836,
+    "longitude": -49.724224
+  },
+  {
+    "rodovia": "SPA 565/310",
+    "km": "2.31",
+    "latitude": -20.68187,
+    "longitude": -50.548494
+  },
+  {
+    "rodovia": "SPD 123/021",
+    "km": "0.80",
+    "latitude": -23.4587,
+    "longitude": -46.34706
+  },
+  {
+    "rodovia": "SPD 123/021",
+    "km": "1.20",
+    "latitude": -23.45932,
+    "longitude": -46.34461
+  },
+  {
+    "rodovia": "SPD 128/021",
+    "km": "0.20",
+    "latitude": -23.41757,
+    "longitude": -46.3612
+  },
+  {
+    "rodovia": "SPI 097/055",
+    "km": "13.02",
+    "latitude": -23.666824,
+    "longitude": -45.465088
+  },
+  {
+    "rodovia": "SPI 097/055",
+    "km": "13.62",
+    "latitude": -23.671417,
+    "longitude": -45.468028
+  },
+  {
+    "rodovia": "SPI 172/060",
+    "km": "0.80",
+    "latitude": -23.658006,
+    "longitude": -46.374814
+  },
+  {
+    "rodovia": "SPI 172/060",
+    "km": "3.00",
+    "latitude": -23.33932,
+    "longitude": -46.061863
+  },
+  {
+    "rodovia": "SPI 177/342",
+    "km": "16.00",
+    "latitude": -22.405382,
+    "longitude": -46.844406
+  },
+  {
+    "rodovia": "SPI 177/342",
+    "km": "20.05",
+    "latitude": -22.399677,
+    "longitude": -46.812467
+  },
+  {
+    "rodovia": "SPI 177/342",
+    "km": "8.70",
+    "latitude": -22.358975,
+    "longitude": -46.868696
+  },
+  {
+    "rodovia": "SPI 328/326",
+    "km": "6.75",
+    "latitude": -22.358975,
+    "longitude": -46.868696
+  },
+  {
+    "rodovia": "SPI 486/300",
+    "km": "6.00",
+    "latitude": -21.421171,
+    "longitude": -50.091839
+  }
+]
